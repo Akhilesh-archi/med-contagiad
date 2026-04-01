@@ -1,0 +1,144 @@
+<svg width="560" height="480" viewBox="0 0 560 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="card-shadow" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="rgba(0,0,0,0.08)"/>
+    </filter>
+    <filter id="center-glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="10" stdDeviation="22" flood-color="rgba(200,55,45,0.28)"/>
+    </filter>
+    <linearGradient id="center-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#c8372d"/>
+      <stop offset="1" stop-color="#e05c52"/>
+    </linearGradient>
+    <linearGradient id="insta-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#833ab4"/>
+      <stop offset="0.5" stop-color="#fd1d1d"/>
+      <stop offset="1" stop-color="#fcb045"/>
+    </linearGradient>
+    <linearGradient id="bg-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#fff8f7"/>
+      <stop offset="1" stop-color="#fff0ef"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Canvas background -->
+  <rect width="560" height="480" rx="24" fill="url(#bg-grad)"/>
+
+  <!-- Orbit ring -->
+  <circle cx="280" cy="240" r="157" fill="none" stroke="#f3e0df" stroke-width="1.5" stroke-dasharray="4 7"/>
+
+  <!-- ── Connecting lines ── -->
+  <line x1="280" y1="202" x2="280" y2="121" stroke="#eac8c6" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <line x1="313" y1="215" x2="382" y2="163" stroke="#eac8c6" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <line x1="313" y1="265" x2="382" y2="317" stroke="#eac8c6" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <line x1="280" y1="278" x2="280" y2="359" stroke="#eac8c6" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <line x1="247" y1="265" x2="178" y2="317" stroke="#eac8c6" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <line x1="247" y1="215" x2="178" y2="163" stroke="#eac8c6" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+  <!-- Midpoint dots on lines -->
+  <circle cx="280" cy="161" r="4" fill="#fde8e7" stroke="#c8372d" stroke-width="1.5"/>
+  <circle cx="348" cy="189" r="4" fill="#fde8e7" stroke="#c8372d" stroke-width="1.5"/>
+  <circle cx="348" cy="291" r="4" fill="#fde8e7" stroke="#c8372d" stroke-width="1.5"/>
+  <circle cx="280" cy="319" r="4" fill="#fde8e7" stroke="#c8372d" stroke-width="1.5"/>
+  <circle cx="212" cy="291" r="4" fill="#fde8e7" stroke="#c8372d" stroke-width="1.5"/>
+  <circle cx="212" cy="189" r="4" fill="#fde8e7" stroke="#c8372d" stroke-width="1.5"/>
+
+  <!-- ══════════════ SERVICE CARDS ══════════════ -->
+
+  <!-- 1. Instagram — top centre (280, 85) -->
+  <g filter="url(#card-shadow)">
+    <rect x="218" y="53" width="124" height="68" rx="14" fill="white"/>
+    <rect x="218" y="53" width="124" height="4" rx="2" fill="url(#insta-grad)"/>
+    <rect x="232" y="66" width="28" height="28" rx="8" fill="url(#insta-grad)"/>
+    <rect x="238" y="72" width="16" height="16" rx="4" fill="none" stroke="white" stroke-width="1.8"/>
+    <circle cx="246" cy="80" r="4.5" fill="none" stroke="white" stroke-width="1.6"/>
+    <circle cx="252.5" cy="73.5" r="1.5" fill="white"/>
+    <text x="267" y="75" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="700" fill="#111827">Instagram</text>
+    <text x="267" y="89" font-family="Inter,Arial,sans-serif" font-size="9" fill="#9ca3af">Reels · Stories</text>
+    <text x="233" y="113" font-family="Inter,Arial,sans-serif" font-size="8.5" font-weight="600" fill="#c8372d">4+ posts / week</text>
+  </g>
+
+  <!-- 2. GMB — top-left (130, 155) -->
+  <g filter="url(#card-shadow)">
+    <rect x="70" y="123" width="124" height="68" rx="14" fill="white"/>
+    <rect x="70" y="123" width="124" height="4" rx="2" fill="#4285f4"/>
+    <circle cx="97" cy="152" r="13" fill="#f1f3f4"/>
+    <text x="90" y="157" font-family="Arial,sans-serif" font-size="14" font-weight="900" fill="#4285f4">G</text>
+    <text x="117" y="143" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="700" fill="#111827">GMB Profile</text>
+    <text x="117" y="157" font-family="Inter,Arial,sans-serif" font-size="9" fill="#9ca3af">Maps · Search</text>
+    <text x="74" y="181" font-family="Inter,Arial,sans-serif" font-size="9.5" fill="#f59e0b">★★★★★</text>
+    <text x="117" y="181" font-family="Inter,Arial,sans-serif" font-size="8.5" fill="#9ca3af">4.9 · 300+ reviews</text>
+  </g>
+
+  <!-- 3. YouTube — top-right (430, 155) -->
+  <g filter="url(#card-shadow)">
+    <rect x="368" y="123" width="124" height="68" rx="14" fill="white"/>
+    <rect x="368" y="123" width="124" height="4" rx="2" fill="#ff0000"/>
+    <rect x="382" y="137" width="28" height="20" rx="5" fill="#ff0000"/>
+    <polygon points="390,143 390,152 397.5,147.5" fill="white"/>
+    <text x="417" y="143" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="700" fill="#111827">YouTube</text>
+    <text x="417" y="157" font-family="Inter,Arial,sans-serif" font-size="9" fill="#9ca3af">Video Marketing</text>
+    <text x="382" y="181" font-family="Inter,Arial,sans-serif" font-size="8.5" font-weight="600" fill="#c8372d">Explainer Videos</text>
+  </g>
+
+  <!-- 4. Search Ads — bottom-right (430, 325) -->
+  <g filter="url(#card-shadow)">
+    <rect x="368" y="293" width="124" height="68" rx="14" fill="white"/>
+    <rect x="368" y="293" width="124" height="4" rx="2" fill="#34a853"/>
+    <circle cx="394" cy="317" r="11" fill="none" stroke="#4285f4" stroke-width="2.5"/>
+    <line x1="402" y1="325" x2="408" y2="331" stroke="#4285f4" stroke-width="2.5" stroke-linecap="round"/>
+    <rect x="382" y="333" width="20" height="12" rx="3" fill="#34a853"/>
+    <text x="384" y="342.5" font-family="Inter,Arial,sans-serif" font-size="7.5" font-weight="800" fill="white">Ad</text>
+    <text x="413" y="310" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="700" fill="#111827">Search Ads</text>
+    <text x="413" y="324" font-family="Inter,Arial,sans-serif" font-size="9" fill="#9ca3af">Google PPC</text>
+    <text x="413" y="347" font-family="Inter,Arial,sans-serif" font-size="8.5" font-weight="600" fill="#34a853">Top results</text>
+  </g>
+
+  <!-- 5. Meta Ads — bottom centre (280, 395) -->
+  <g filter="url(#card-shadow)">
+    <rect x="218" y="363" width="124" height="68" rx="14" fill="white"/>
+    <rect x="218" y="363" width="124" height="4" rx="2" fill="#0668e1"/>
+    <rect x="232" y="376" width="28" height="28" rx="8" fill="#0668e1"/>
+    <text x="239" y="393" font-family="Arial,sans-serif" font-size="15" font-weight="900" fill="white">f</text>
+    <text x="268" y="385" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="700" fill="#111827">Meta Ads</text>
+    <text x="268" y="399" font-family="Inter,Arial,sans-serif" font-size="9" fill="#9ca3af">FB · Instagram</text>
+    <text x="233" y="422" font-family="Inter,Arial,sans-serif" font-size="8.5" font-weight="600" fill="#c8372d">Hyper-targeted</text>
+  </g>
+
+  <!-- 6. Website — bottom-left (130, 325) -->
+  <g filter="url(#card-shadow)">
+    <rect x="70" y="293" width="124" height="68" rx="14" fill="white"/>
+    <rect x="70" y="293" width="124" height="4" rx="2" fill="#10b981"/>
+    <circle cx="97" cy="319" r="12" fill="none" stroke="#10b981" stroke-width="2"/>
+    <ellipse cx="97" cy="319" rx="5.5" ry="12" fill="none" stroke="#10b981" stroke-width="1.5"/>
+    <line x1="85" y1="319" x2="109" y2="319" stroke="#10b981" stroke-width="1.5"/>
+    <text x="116" y="313" font-family="Inter,Arial,sans-serif" font-size="11" font-weight="700" fill="#111827">Website</text>
+    <text x="116" y="327" font-family="Inter,Arial,sans-serif" font-size="9" fill="#9ca3af">Free for 1 Year</text>
+    <text x="74" y="351" font-family="Inter,Arial,sans-serif" font-size="8.5" font-weight="600" fill="#10b981">SEO optimised</text>
+  </g>
+
+  <!-- ══════════════ CENTRE HUB ══════════════ -->
+  <g filter="url(#center-glow)">
+    <rect x="188" y="190" width="184" height="100" rx="22" fill="url(#center-grad)"/>
+
+    <!-- Doctor avatar -->
+    <circle cx="228" cy="226" r="23" fill="rgba(255,255,255,0.18)"/>
+    <circle cx="228" cy="219" r="9.5" fill="white"/>
+    <path d="M213,243 Q228,251 243,243" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+    <!-- Stethoscope hint -->
+    <circle cx="235" cy="214" r="3" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.5"/>
+
+    <!-- #1 Badge -->
+    <rect x="242" y="205" width="32" height="19" rx="9.5" fill="white"/>
+    <text x="251" y="218" font-family="Inter,Arial,sans-serif" font-size="9.5" font-weight="900" fill="#c8372d">#1</text>
+
+    <!-- Labels -->
+    <text x="280" y="250" font-family="Inter,Arial,sans-serif" font-size="13.5" font-weight="800" fill="white" text-anchor="middle">Your Practice</text>
+    <text x="280" y="265" font-family="Inter,Arial,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.82)" text-anchor="middle">360° Digital Presence</text>
+
+    <!-- Bottom pill -->
+    <rect x="206" y="271" width="148" height="28" rx="12" fill="rgba(255,255,255,0.18)"/>
+    <text x="280" y="289" font-family="Inter,Arial,sans-serif" font-size="9.5" font-weight="700" fill="white" text-anchor="middle">Dominate Your City  →</text>
+  </g>
+</svg>
