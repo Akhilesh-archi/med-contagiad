@@ -128,7 +128,9 @@
     .hero-wrap {
       position: relative;
       overflow: hidden;
-      height: calc(100vh - 60px);
+      min-height: calc(100vh - 60px);
+      display: flex;
+      flex-direction: column;
     }
 
     .blob {
@@ -154,14 +156,14 @@
       display: grid;
       grid-template-columns: 58% 1fr;
       gap: 72px;
-      align-items: stretch;
+      align-items: center;
       max-width: 1240px;
       margin: 0 auto;
       padding: 24px 52px 24px;
-      height: 100%;
+      flex: 1;
     }
 
-    .hero-left { display: flex; flex-direction: column; gap: 12px; justify-content: center; }
+    .hero-left { display: flex; flex-direction: column; gap: 12px; justify-content: center; overflow: hidden; }
 
     .badge {
       display: inline-flex;
@@ -289,7 +291,7 @@
     .trust-item svg { width: 14px; height: 14px; fill: #c8372d; flex-shrink: 0; }
 
     /* ── RIGHT ── */
-    .hero-right { position: relative; padding-top: 28px; }
+    .hero-right { position: relative; }
 
     .media-card {
       background: linear-gradient(145deg, #fff5f5 0%, #fff0f0 100%);
@@ -465,22 +467,72 @@
     .mock-chart-months span { font-size: 0.6rem; color: #94a3b8; flex: 1; text-align: center; }
 
     /* ─────────────────────────── RESPONSIVE ─────────────────────────── */
+
+    /* Tablet (≤ 900px) */
     @media (max-width: 900px) {
       nav { padding: 0 24px; }
       .hero {
         grid-template-columns: 1fr;
-        padding: 56px 24px 72px;
-        gap: 48px;
+        padding: 40px 24px 56px;
+        gap: 32px;
       }
       .hero-right { order: -1; }
-      .media-card { min-height: 320px; }
+      .media-card { min-height: auto; }
+      .pill-1, .pill-2 { display: none; }
+      .google-ui-wrap { zoom: 0.85; }
+    }
+
+    /* Mobile (≤ 600px) */
+    @media (max-width: 600px) {
+      nav {
+        padding: 0 16px;
+        height: 56px;
+      }
+      .logo { font-size: 1.15rem; }
+      .btn-outline { display: none; }
+      .phone-num { display: none; }
+      .phone-bubble { width: 34px; height: 34px; }
+      .nav-right { gap: 10px; }
+
+      .hero-wrap { min-height: 0; }
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 20px 16px 40px;
+        gap: 24px;
+      }
+      .hero-right { order: -1; }
+      .hero-left { gap: 10px; }
+
+      h1 { font-size: clamp(1.6rem, 7.5vw, 2rem); line-height: 1.15; }
+      .hero-sub { font-size: 0.88rem; margin-top: 4px; }
+      .hero-body { font-size: 0.82rem; max-width: 100%; }
+
+      .review-bar { padding: 6px 12px 6px 6px; gap: 8px; }
+      .avatar { width: 26px; height: 26px; }
+      .avatar img { width: 26px !important; height: 26px !important; }
+
+      .cta-group { gap: 12px; }
+      .btn-cta {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 20px;
+        font-size: 0.9rem;
+      }
+      .trust-list { gap: 10px; }
+      .trust-item { font-size: 0.74rem; }
+
+      .media-card { min-height: auto; border-radius: 14px; }
+      .google-ui-wrap { zoom: 0.72; }
       .pill-1, .pill-2 { display: none; }
     }
 
-    @media (max-width: 560px) {
-      .btn-outline { display: none; }
-      h1 { font-size: 2rem; }
-      .trust-list { gap: 12px; }
+    /* Small phones (≤ 400px) */
+    @media (max-width: 400px) {
+      nav { padding: 0 12px; }
+      h1 { font-size: 1.5rem; }
+      .hero { padding: 16px 14px 36px; }
+      .trust-list { flex-direction: column; align-items: flex-start; gap: 8px; }
+      .google-ui-wrap { zoom: 0.62; }
     }
   </style>
 </head>
@@ -496,7 +548,7 @@
         <span class="phone-bubble">
           <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.61 21 3 13.39 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.26.2 2.47.57 3.58.11.35.03.74-.24 1.02l-2.23 2.2z"/></svg>
         </span>
-        01169310807
+        <span class="phone-num">01169310807</span>
       </a>
       <a href="consultation.html" class="btn-outline" style="text-decoration:none;">Book Expert Consultation</a>
     </div>
@@ -598,7 +650,7 @@
           </div>
 
           <!-- Google UI body -->
-          <div style="background:#fff;padding:0;overflow:hidden;">
+          <div class="google-ui-wrap" style="background:#fff;padding:0;overflow:hidden;">
 
             <!-- Google search bar -->
             <div style="padding:10px 12px;border-bottom:1px solid #e0e0e0;display:flex;align-items:center;gap:10px;">
