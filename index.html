@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Become the #1 Practitioner in Your City</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -193,8 +194,8 @@
       flex: 1;
     }
 
-    .hero-left { display: flex; flex-direction: column; gap: 12px; justify-content: center; }
-    .hero-right { position: relative; overflow: hidden; }
+    .hero-left { display: flex; flex-direction: column; gap: 12px; justify-content: center; align-items: center; text-align: center; }
+    .hero-right { position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
 
     .badge {
       display: inline-flex;
@@ -512,11 +513,12 @@
 
     /* Mobile (≤ 600px) */
     @media (max-width: 600px) {
-      nav { padding: 0 16px; height: 56px; }
-      .logo { font-size: 1.15rem; }
+      nav { padding: 0 16px; height: 62px; }
+      .logo { font-size: 1.35rem; }
       .btn-outline { display: none; }
       .phone-num { display: none; }
-      .phone-bubble { width: 34px; height: 34px; }
+      .phone-bubble { width: 44px; height: 44px; }
+      .phone-bubble svg { width: 22px; height: 22px; }
       .nav-right { gap: 10px; }
 
       .hero-wrap { min-height: calc(100svh - 56px); overflow-x: hidden; }
@@ -628,7 +630,7 @@
         </p>
 
         <p class="hero-body">
-          Claim the digital home your practice deserves — <strong>get a custom website free for one year.</strong>
+          Claim the digital home your practice deserves — <strong style="font-weight:900;color:var(--ink);">get a custom website free for one year.</strong>
         </p>
 
         <div class="cta-group">
