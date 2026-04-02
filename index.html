@@ -569,6 +569,13 @@
       font-weight: 800;
       color: white;
       flex-shrink: 0;
+      overflow: hidden;
+    }
+    .t-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
     }
     .t-name {
       font-size: 0.85rem;
@@ -764,7 +771,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="t-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
           <p class="t-quote">"Within 3 months my appointment calendar was fully booked. The 360-degree approach really works — patients now find me on Google, Instagram, and even YouTube. I wish I had started earlier."</p>
           <div class="t-author">
-            <div class="t-avatar" style="background:linear-gradient(135deg,#c8372d,#e05a4e);">PS</div>
+            <div class="t-avatar">
+              <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Dr. Priya Sharma" />
+            </div>
             <div>
               <div class="t-name">Dr. Priya Sharma</div>
               <div class="t-role">Dermatologist · New Delhi</div>
