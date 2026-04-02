@@ -744,6 +744,147 @@
       .testimonials-grid { grid-template-columns: 1fr; gap: 16px; }
       .testimonials { padding: 48px 20px 56px; }
     }
+
+    /* ─────────────────────────── PAS SECTION ─────────────────────────── */
+    .pas {
+      background: #f9f8f7;
+      padding: 80px 24px;
+    }
+    .pas-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .pas-headline {
+      font-size: clamp(1.8rem, 2.6vw, 2.4rem);
+      font-weight: 900;
+      color: #0f0f0f;
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    .pas-headline em {
+      font-style: normal;
+      color: #c8372d;
+    }
+    .pas-block {
+      margin-bottom: 48px;
+    }
+    .pas-label {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #c8372d;
+      background: rgba(200,55,45,0.12);
+      border: 1px solid rgba(200,55,45,0.3);
+      border-radius: 20px;
+      padding: 4px 12px;
+      margin-bottom: 20px;
+    }
+    .pas-block p {
+      font-size: 1rem;
+      color: #4a4a4a;
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+    .pas-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .pas-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.95rem;
+      color: #3a3a3a;
+      line-height: 1.6;
+    }
+    .pas-list li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #c8372d;
+      flex-shrink: 0;
+      margin-top: 9px;
+    }
+    .pas-agitate-bullets {
+      background: #fde8e7;
+      border-left: 3px solid #c8372d;
+      border-radius: 0 10px 10px 0;
+      padding: 20px 24px;
+      margin-top: 20px;
+    }
+    .pas-agitate-bullets li {
+      color: #3a3a3a;
+    }
+    .pas-solution-card {
+      background: #ffffff;
+      border: 1px solid #e4e0e0;
+      border-radius: 14px;
+      padding: 28px;
+      margin-top: 20px;
+    }
+    .pas-solution-card h3 {
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #c8372d;
+      margin-bottom: 14px;
+    }
+    .pas-cta-block {
+      margin-top: 56px;
+      background: #c8372d;
+      border-radius: 18px;
+      padding: 40px 36px;
+      text-align: center;
+    }
+    .pas-cta-block p {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.88);
+      line-height: 1.7;
+      margin-bottom: 8px;
+    }
+    .pas-cta-block .offer-tag {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #fff;
+      background: rgba(0,0,0,0.25);
+      border-radius: 20px;
+      padding: 5px 14px;
+      margin-bottom: 24px;
+    }
+    .pas-cta-btn {
+      display: inline-block;
+      background: #ffffff;
+      color: #c8372d;
+      font-family: inherit;
+      font-size: 0.97rem;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 16px 36px;
+      border-radius: 10px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.25);
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .pas-cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 32px rgba(0,0,0,0.3);
+    }
+    @media (max-width: 600px) {
+      .pas { padding: 60px 20px; }
+      .pas-cta-block { padding: 28px 20px; }
+    }
   </style>
 </head>
 <body>
@@ -801,7 +942,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <h1>
-          Become the <span class="accent">#1 Practitioner</span><br/>
+          Become the <span class="accent">#1&nbsp; Practitioner</span><br/>
           in your city&nbsp;— and own<br/>your Speciality
         </h1>
 
@@ -898,6 +1039,66 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
+
+  <!-- PAS SECTION -->
+  <section class="pas">
+    <div class="pas-inner">
+
+      <h2 class="pas-headline">
+        Become the <em>#1 practitioner</em> in your town —<br/>
+        without burning out<br/>
+        or sacrificing family time on marketing.
+      </h2>
+
+      <!-- PROBLEM -->
+      <div class="pas-block">
+        <span class="pas-label">Problem</span>
+        <ul class="pas-list">
+          <li>Do you want to become the #1 doctor in your city but don't know how to get there?</li>
+          <li>Are you struggling with low clinic footfall?</li>
+          <li>Are you worried about "doctor-influencers" on Instagram and YouTube stealing your patients?</li>
+          <li>Do you want to build a reputable clinic or hospital brand?</li>
+          <li>Do you feel overwhelmed by the complexities of marketing and branding?</li>
+        </ul>
+      </div>
+
+      <!-- AGITATE -->
+      <div class="pas-block">
+        <span class="pas-label">Why It Gets Worse</span>
+        <p>Most doctors and practitioners feel exactly this way. You studied medicine, not marketing or branding. In reality, managing these activities is a full-time job.</p>
+        <p>Even the most skilled doctors face declining clinic visits due to the rapid increase in digital marketing spend by competitors and a shift in patient behaviour. Today, patients search for a clinic online before asking friends or family. If you aren't discoverable online, they won't even consider you.</p>
+        <p>Simply having a few 5-star reviews on your Google Business Profile is no longer enough. A patient goes through multiple touchpoints before finally visiting your clinic. If your messaging and branding are inconsistent across these touchpoints, you lose trust — and your patients.</p>
+        <ul class="pas-list pas-agitate-bullets">
+          <li>Low clinic visits mean fewer patients you can help — and a practice that stagnates.</li>
+          <li>Your dream of becoming the best doctor in town slowly fades away.</li>
+          <li>You spend more time trying to fix your reputation, leaving less time for your family.</li>
+          <li>A less skilled competitor becomes the "top" doctor simply because they have a better digital presence than you.</li>
+        </ul>
+      </div>
+
+      <!-- SOLUTION -->
+      <div class="pas-block">
+        <span class="pas-label">Solution</span>
+        <p>The good news is that building a clinic brand isn't about luck — it's the result of well-thought-out marketing and branding. Clinical expertise alone is no longer enough to bring patients to your door.</p>
+        <p>We offer an all-inclusive 360° marketing and branding system designed to grow your patient base and establish you as the #1 doctor in your town. We identify every touchpoint a patient encounters and ensure your brand is present and persuasive at every step.</p>
+        <div class="pas-solution-card">
+          <h3>Why Choose Us</h3>
+          <ul class="pas-list">
+            <li><strong style="color:#0f0f0f;">Exclusivity —</strong> We do not work with your direct competitors in the same city. We disclose all the doctors we currently partner with (unless protected by an NDA).</li>
+            <li><strong style="color:#0f0f0f;">Experience —</strong> We are seasoned marketing and branding professionals. Let us elevate your digital reputation and grow your patient appointments.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="pas-cta-block">
+        <p>Book your free 30-minute expert consultation with one of our team members and discover how we can make you the go-to specialist in your area.</p>
+        <span class="offer-tag">Limited Offer — Free Website worth ₹14,999 · Only 3 slots available this month</span><br>
+        <a href="consultation.html" class="pas-cta-btn">Book My Free Consultation →</a>
+      </div>
+
+    </div>
+  </section>
 
   <a href="tel:+911169310807" class="fab-call" aria-label="Call us">
     <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.61 21 3 13.39 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.26.2 2.47.57 3.58.11.35.03.74-.24 1.02l-2.23 2.2z"/></svg>
