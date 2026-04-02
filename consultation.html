@@ -154,8 +154,14 @@
       margin-top: 16px;
       font-size: 0.75rem;
       color: var(--ink-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: nowrap;
+      gap: 0;
+      white-space: nowrap;
     }
-    .form-footer span { margin: 0 6px; color: var(--border); }
+    .form-footer span { margin: 0 8px; color: var(--border); }
 
     /* CONFIRMATION STATE */
     #confirmation {
@@ -274,7 +280,7 @@
           </div>
           <div class="form-group">
             <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" placeholder="+44 7700 900000" required autocomplete="tel" />
+            <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required autocomplete="tel" />
           </div>
           <button type="submit" class="submit-btn">Book My Free Consultation →</button>
         </form>
