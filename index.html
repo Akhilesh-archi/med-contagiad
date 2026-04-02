@@ -185,16 +185,16 @@
     .hero {
       position: relative;
       display: grid;
-      grid-template-columns: 58% 1fr;
-      gap: 72px;
+      grid-template-columns: 52% 1fr;
+      gap: 48px;
       align-items: center;
-      max-width: 1240px;
+      max-width: 960px;
       margin: 0 auto;
-      padding: 24px 52px 24px;
+      padding: 24px 40px 24px;
       flex: 1;
     }
 
-    .hero-left { display: flex; flex-direction: column; gap: 12px; justify-content: center; align-items: center; text-align: center; }
+    .hero-left { display: flex; flex-direction: column; gap: 12px; justify-content: center; align-items: flex-start; text-align: left; }
     .hero-right { position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
 
     .badge {
@@ -320,6 +320,18 @@
       font-weight: 500;
     }
     .trust-item svg { width: 14px; height: 14px; fill: #c8372d; flex-shrink: 0; }
+
+    .hand-underline {
+      position: relative;
+      display: inline;
+      background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 10' preserveAspectRatio='none'%3E%3Cpath d='M2,7 C18,2 40,10 62,6 C84,2 106,9 128,5 C150,1 172,8 194,5 C204,3 212,6 218,5' fill='none' stroke='%23c8372d' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"),
+        linear-gradient(104deg, transparent 1%, rgba(255,220,0,0.38) 3%, rgba(255,220,0,0.38) 97%, transparent 99%);
+      background-repeat: no-repeat, no-repeat;
+      background-position: 0 100%, 0 45%;
+      background-size: 100% 10px, 100% 72%;
+      padding-bottom: 6px;
+    }
 
     /* ── RIGHT ── */
 
@@ -625,12 +637,12 @@
         <p class="hero-sub">Does your digital presence match your clinical expertise?</p>
 
         <p class="hero-body">
-          A few reviews aren't enough to lead your market. Our 360-degree approach ensures
+          A few reviews aren't enough to lead your town. Our 360-degree approach ensures
           your practice stays top-of-mind wherever your patients are, across every platform.
         </p>
 
         <p class="hero-body">
-          Claim the digital home your practice deserves — <strong style="font-weight:900;color:var(--ink);">get a custom website free for one year.</strong>
+          Claim the digital home your practice deserves — <strong style="font-weight:900;color:var(--ink);">get a <span class="hand-underline">custom website free</span> for one year.</strong>
         </p>
 
         <div class="cta-group">
