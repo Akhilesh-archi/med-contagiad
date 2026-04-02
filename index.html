@@ -98,35 +98,6 @@
     }
     .phone-bubble svg { width: 18px; height: 18px; fill: #fff; }
 
-    .phone-dropdown-wrap { position: relative; }
-    .phone-link { background: none; border: none; cursor: pointer; }
-    .phone-dropdown {
-      display: none;
-      position: absolute;
-      top: calc(100% + 10px);
-      right: 0;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 8px 28px rgba(0,0,0,0.13);
-      border: 1px solid var(--border);
-      min-width: 190px;
-      overflow: hidden;
-      z-index: 200;
-    }
-    .phone-dropdown-wrap.open .phone-dropdown { display: block; }
-    .phone-dropdown a {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 12px 16px;
-      font-size: 0.88rem;
-      font-weight: 600;
-      color: var(--ink);
-      text-decoration: none;
-      transition: background 0.15s;
-    }
-    .phone-dropdown a:hover { background: var(--purple-light); color: var(--purple); }
-    .phone-dropdown a + a { border-top: 1px solid var(--border); }
 
     .btn-outline {
       border: none;
@@ -590,18 +561,12 @@
       <span class="logo-text"><span>med.</span>Contagi<span>A</span><span>d</span></span>
     </div>
     <div class="nav-right">
-      <div class="phone-dropdown-wrap" id="phoneWrap">
-        <button class="phone-link" onclick="document.getElementById('phoneWrap').classList.toggle('open')" aria-label="Call us">
-          <span class="phone-bubble">
-            <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.61 21 3 13.39 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.26.2 2.47.57 3.58.11.35.03.74-.24 1.02l-2.23 2.2z"/></svg>
-          </span>
-          <span class="phone-num">Call Us</span>
-        </button>
-        <div class="phone-dropdown">
-          <a href="tel:+911169310807">🇮🇳 +91 1169 310807</a>
-          <a href="tel:+441169310807">🇬🇧 +44 1169 310807</a>
-        </div>
-      </div>
+      <a href="tel:+911169310807" class="phone-link">
+        <span class="phone-bubble">
+          <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.61 21 3 13.39 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.26.2 2.47.57 3.58.11.35.03.74-.24 1.02l-2.23 2.2z"/></svg>
+        </span>
+        <span class="phone-num">Call Us</span>
+      </a>
       <a href="consultation.html" class="btn-outline" style="text-decoration:none;">Book Expert Consultation</a>
     </div>
   </nav>
@@ -687,12 +652,6 @@
     </section>
   </div>
 
-  <script>
-    document.addEventListener('click', function(e) {
-      var wrap = document.getElementById('phoneWrap');
-      if (wrap && !wrap.contains(e.target)) wrap.classList.remove('open');
-    });
-  </script>
 
 </body>
 </html>
