@@ -108,6 +108,10 @@
     .phone-bubble svg { width: 18px; height: 18px; fill: #fff; }
 
 
+    .btn-nav-cta {
+      display: none;
+    }
+
     .btn-outline {
       border: none;
       background: var(--purple);
@@ -296,10 +300,21 @@
       align-items: center;
       gap: 6px;
       font-size: 0.8rem;
-      color: var(--ink-soft);
+      color: var(--ink-mid);
       font-weight: 500;
     }
     .trust-item svg { width: 14px; height: 14px; fill: #c8372d; flex-shrink: 0; }
+
+    .hand-usp {
+      display: inline;
+      font-weight: 800;
+      color: var(--ink);
+      background-image: linear-gradient(104deg, transparent 1%, rgba(200,55,45,0.22) 3%, rgba(200,55,45,0.22) 97%, transparent 99%);
+      background-repeat: no-repeat;
+      background-position: 0 45%;
+      background-size: 100% 72%;
+      padding: 2px 4px;
+    }
 
     .hand-underline {
       position: relative;
@@ -609,6 +624,21 @@
       .logo { font-size: 1.35rem; }
       .btn-outline { display: none; }
       .phone-num { display: none; }
+      .btn-nav-cta {
+        display: inline-flex;
+        align-items: center;
+        background: linear-gradient(135deg, #e05c52, #c8372d);
+        color: #fff;
+        font-family: inherit;
+        font-size: 0.78rem;
+        font-weight: 700;
+        padding: 9px 16px;
+        border-radius: 8px;
+        text-decoration: none;
+        white-space: nowrap;
+        box-shadow: 0 3px 10px rgba(200,55,45,0.35);
+        letter-spacing: 0.01em;
+      }
       .phone-bubble { width: 44px; height: 44px; }
       .phone-bubble svg { width: 22px; height: 22px; }
       .nav-right { gap: 10px; }
@@ -680,9 +710,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span class="phone-bubble">
           <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.61 21 3 13.39 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.26.2 2.47.57 3.58.11.35.03.74-.24 1.02l-2.23 2.2z"/></svg>
         </span>
-        <span class="phone-num">Call Us</span>
+        <span class="phone-num">+91 11 6931 0807</span>
       </a>
       <a href="consultation.html" class="btn-outline" style="text-decoration:none;">Book Expert Consultation</a>
+      <a href="consultation.html" class="btn-nav-cta">Book Free →</a>
     </div>
   </nav>
 
@@ -718,7 +749,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <p class="hero-body">
           A few reviews aren't enough to lead your town. Our <span class="hand-underline-only">360-degree approach</span> ensures
-          your practice stays top-of-mind wherever your patients are, across every platform.
+          your practice stays top-of-mind wherever your patients are, across every platform. <span class="hand-usp">We never work with your competition — one speciality per city.</span>
         </p>
 
         <p class="hero-body">
@@ -769,7 +800,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="t-card">
           <div class="t-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-          <p class="t-quote">"Within 3 months my appointment calendar was fully booked. The 360-degree approach really works — patients now find me on Google, Instagram, and even YouTube. I wish I had started earlier."</p>
+          <p class="t-quote">"I had a decent clinic but patients in my own colony were going to a competitor with better Google reviews. Within 90 days of their 360-degree plan — Search Ads, Instagram reels, and Google Maps optimisation — I became the top-rated dermatologist in South Delhi. My OPD went from 18 to 47 patients a day. The free website alone looks more premium than clinics charging ₹5,000 a consultation."</p>
           <div class="t-author">
             <div class="t-avatar" style="background:linear-gradient(135deg,#c8372d,#e05a4e);">PS</div>
             <div>
@@ -781,7 +812,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="t-card">
           <div class="t-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-          <p class="t-quote">"I was skeptical at first, but the results speak for themselves. My Google reviews went from 12 to 91 in just 4 months. The free website they built looks incredibly professional and patients compliment it."</p>
+          <p class="t-quote">"As an orthopedic surgeon, I never thought social media could fill my OT schedule — I was wrong. Their team covered every platform: YouTube for patient education, Meta Ads for reach, Google reviews for trust. In 5 months my reviews jumped from 9 to 84 and I stopped depending on hospital referrals entirely. Revenue up 55%. I only wish I had done this when I first set up my practice."</p>
           <div class="t-author">
             <div class="t-avatar" style="background:linear-gradient(135deg,#1d4ed8,#3b82f6);">RM</div>
             <div>
@@ -793,7 +824,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="t-card">
           <div class="t-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-          <p class="t-quote">"The team understands the medical space deeply. They created content that builds trust with patients while staying fully compliant. My practice has grown by over 40% since we partnered with them."</p>
+          <p class="t-quote">"What sets them apart is that they actually understand medical marketing — no generic content, no compliance headaches. They built my entire digital presence from scratch: website, Instagram, Google Maps, even YouTube health videos. New patient walk-ins doubled in 4 months. I now rank #1 for 'gynaecologist in Banjara Hills' and patients come in already trusting me because of what they've seen online."</p>
           <div class="t-author">
             <div class="t-avatar" style="background:linear-gradient(135deg,#059669,#10b981);">AR</div>
             <div>
