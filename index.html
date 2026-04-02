@@ -904,7 +904,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </a>
 
   <button id="scroll-top" aria-label="Scroll to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-    <svg viewBox="0 0 24 24"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
+    <svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6 1.41 1.41z"/></svg>
   </button>
 
   <style>
@@ -912,12 +912,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       position: fixed;
       bottom: 24px;
       right: 24px;
-      width: 36px;
-      height: 36px;
+      width: 38px;
+      height: 38px;
       border-radius: 50%;
-      background: var(--white);
-      border: 1.5px solid var(--border);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+      background: linear-gradient(135deg, #e05c52, #c8372d);
+      border: none;
+      box-shadow: 0 4px 12px rgba(200,55,45,0.4);
       display: grid;
       place-items: center;
       cursor: pointer;
@@ -928,7 +928,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
     #scroll-top.visible { opacity: 1; pointer-events: auto; }
     #scroll-top:hover { transform: translateY(-2px); }
-    #scroll-top svg { width: 16px; height: 16px; fill: var(--purple); }
+    #scroll-top svg { width: 18px; height: 18px; fill: #fff; }
   </style>
 
   <script>
