@@ -83,6 +83,8 @@
       font-weight: 600;
       letter-spacing: -0.01em;
       transition: opacity 0.18s, transform 0.15s, box-shadow 0.18s;
+      -webkit-tap-highlight-color: transparent;
+      outline: none;
     }
     .phone-link:hover { opacity: 1; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(200,55,45,0.3); border-radius: 8px; }
 
@@ -156,10 +158,10 @@
     .hero {
       position: relative;
       display: grid;
-      grid-template-columns: 52% 1fr;
-      gap: 48px;
+      grid-template-columns: 46% 1fr;
+      gap: 40px;
       align-items: center;
-      max-width: 960px;
+      max-width: 1060px;
       margin: 0 auto;
       padding: 24px 40px 24px;
       flex: 1;
@@ -302,6 +304,15 @@
       background-position: 0 100%, 0 45%;
       background-size: 100% 10px, 100% 72%;
       padding-bottom: 6px;
+    }
+    .hand-underline-only {
+      display: inline-block;
+      position: relative;
+      background-image: linear-gradient(104deg, transparent 1%, rgba(200,55,45,0.22) 3%, rgba(200,55,45,0.22) 97%, transparent 99%);
+      background-repeat: no-repeat;
+      background-position: 0 45%;
+      background-size: 100% 72%;
+      padding: 2px 4px;
     }
 
     /* ── RIGHT ── */
@@ -602,7 +613,7 @@
         <p class="hero-sub">Does your digital presence match your clinical expertise?</p>
 
         <p class="hero-body">
-          A few reviews aren't enough to lead your town. Our 360-degree approach ensures
+          A few reviews aren't enough to lead your town. Our <span class="hand-underline-only">360-degree approach</span> ensures
           your practice stays top-of-mind wherever your patients are, across every platform.
         </p>
 
@@ -637,13 +648,6 @@
       <!-- RIGHT -->
       <div class="hero-right">
 
-<div class="stat-pill pill-2">
-          <span class="pill-icon" style="background:linear-gradient(135deg,#10b981,#059669)">
-            <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
-          </span>
-          <span class="pill-num">75+</span>
-          <span class="pill-label">Practices grown</span>
-        </div>
 
         <img src="hero-ecosystem.svg" alt="360 degree digital marketing ecosystem" style="width:100%;height:auto;display:block;border-radius:20px;" />
 
