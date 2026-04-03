@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-WSHSJCL6');</script>
-  <!-- End Google Tag Manager -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Become the #1 doctor in your city within 90 days. med.ContagiAd offers a 360° medical marketing & branding system for doctors and practitioners across India." />
   <title>Become the #1 Practitioner in Your City</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <!-- Preconnect for fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <!-- DNS prefetch for third-party assets -->
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+  <link rel="dns-prefetch" href="https://randomuser.me" />
+  <!-- Load fonts async to avoid render-blocking -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" /></noscript>
+  <!-- GTM deferred to after paint -->
+  <script>window.addEventListener('load',function(){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WSHSJCL6');});</script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -932,10 +935,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="review-bar">
           <div class="review-avatars">
-            <span class="avatar" style="background:#ddd;padding:0;overflow:hidden;"><img src="https://randomuser.me/api/portraits/men/48.jpg" width="32" height="32" alt="Indian doctor" style="display:block;width:32px;height:32px;object-fit:cover;"/></span>
+            <span class="avatar" style="background:#ddd;padding:0;overflow:hidden;"><img src="https://randomuser.me/api/portraits/men/48.jpg" width="32" height="32" alt="Doctor" loading="lazy" decoding="async" style="display:block;width:32px;height:32px;object-fit:cover;"/></span>
             <span class="avatar" style="background:linear-gradient(135deg,#4338ca,#6366f1);font-size:0.62rem;font-weight:800;color:#fff;">PR</span>
-            <span class="avatar" style="background:#ddd;padding:0;overflow:hidden;"><img src="https://randomuser.me/api/portraits/women/8.jpg" width="32" height="32" alt="Indian doctor" style="display:block;width:32px;height:32px;object-fit:cover;"/></span>
-            <span class="avatar" style="background:#ddd;padding:0;overflow:hidden;"><img src="https://randomuser.me/api/portraits/women/19.jpg" width="32" height="32" alt="Indian doctor" style="display:block;width:32px;height:32px;object-fit:cover;"/></span>
+            <span class="avatar" style="background:#ddd;padding:0;overflow:hidden;"><img src="https://randomuser.me/api/portraits/women/8.jpg" width="32" height="32" alt="Doctor" loading="lazy" decoding="async" style="display:block;width:32px;height:32px;object-fit:cover;"/></span>
+            <span class="avatar" style="background:#ddd;padding:0;overflow:hidden;"><img src="https://randomuser.me/api/portraits/women/19.jpg" width="32" height="32" alt="Doctor" loading="lazy" decoding="async" style="display:block;width:32px;height:32px;object-fit:cover;"/></span>
           </div>
           <div class="review-info">
             <div class="review-stars">★★★★<span style="position:relative;display:inline-block;color:#e5e7eb;">★<span style="position:absolute;left:0;top:0;width:50%;overflow:hidden;color:#f59e0b;">★</span></span></div>
@@ -988,7 +991,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="hero-right">
 
 
-        <img src="hero-ecosystem.svg" alt="360 degree digital marketing ecosystem" style="width:100%;height:auto;display:block;" />
+        <img src="hero-ecosystem.svg" alt="360 degree digital marketing ecosystem" width="560" height="480" fetchpriority="high" decoding="async" style="width:100%;height:auto;display:block;" />
 
       </div>
 
@@ -1137,9 +1140,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <script>
     const scrollBtn = document.getElementById('scroll-top');
+    let _st;
     window.addEventListener('scroll', () => {
-      scrollBtn.classList.toggle('visible', window.scrollY > 300);
-    });
+      if (_st) return;
+      _st = requestAnimationFrame(() => {
+        scrollBtn.classList.toggle('visible', window.scrollY > 300);
+        _st = null;
+      });
+    }, { passive: true });
   </script>
 </body>
 </html>
