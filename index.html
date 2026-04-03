@@ -747,7 +747,94 @@
       .trust-list { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 8px 16px; }
       .testimonials-grid { grid-template-columns: 1fr; gap: 16px; }
       .testimonials { padding: 48px 20px 56px; }
+      .orbit-wrap { width: 340px; height: 340px; margin: 0 auto; }
+      .orbit-ring { width: 280px; height: 280px; }
+      .orbit-center { width: 80px; height: 80px; }
     }
+
+    /* ─────────────────────────── ORBIT ─────────────────────────── */
+    @keyframes orbit {
+      from { transform: rotate(0deg) translateX(var(--r)) rotate(0deg); }
+      to   { transform: rotate(360deg) translateX(var(--r)) rotate(-360deg); }
+    }
+
+    .orbit-wrap {
+      position: relative;
+      width: 480px;
+      height: 480px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .orbit-ring {
+      position: absolute;
+      width: 380px;
+      height: 380px;
+      border-radius: 50%;
+      border: 1.5px dashed rgba(200,55,45,0.2);
+      pointer-events: none;
+    }
+
+    .orbit-center {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: #fff;
+      border: 2px solid rgba(200,55,45,0.2);
+      box-shadow: 0 4px 24px rgba(200,55,45,0.15);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      z-index: 2;
+    }
+    .orbit-center-inner { display: flex; flex-direction: column; align-items: center; gap: 3px; }
+    .orbit-center-inner svg { width: 40px; height: 40px; }
+    .orbit-center-inner span { font-size: 0.6rem; font-weight: 800; color: #c8372d; letter-spacing: 0.05em; }
+
+    .orbit-card-wrap {
+      position: absolute;
+      --r: 190px;
+      animation: orbit 14s linear infinite;
+      z-index: 3;
+    }
+    .card-pos-1 { animation-delay: 0s; }
+    .card-pos-2 { animation-delay: -3.5s; }
+    .card-pos-3 { animation-delay: -7s; }
+    .card-pos-4 { animation-delay: -10.5s; }
+
+    .orbit-card {
+      width: 160px;
+      background: #fff;
+      border: 1px solid #e4e0e0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.10);
+      font-family: inherit;
+    }
+    .oc-header {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 10px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: #fff;
+    }
+    .oc-header svg { width: 14px; height: 14px; flex-shrink: 0; }
+    .oc-body { padding: 8px 10px; display: flex; flex-direction: column; gap: 6px; }
+    .oc-img-placeholder {
+      width: 100%;
+      height: 60px;
+      border-radius: 6px;
+    }
+    .oc-title { font-size: 0.65rem; font-weight: 700; color: #0f172a; line-height: 1.3; }
+    .oc-meta { font-size: 0.6rem; color: #64748b; }
+    .oc-gmb-stars { font-size: 0.7rem; color: #f59e0b; }
 
     /* ─────────────────────────── PAS SECTION ─────────────────────────── */
     .pas {
@@ -988,10 +1075,91 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <!-- RIGHT -->
       <div class="hero-right">
+        <div class="orbit-wrap">
 
+          <!-- Centre -->
+          <div class="orbit-center">
+            <div class="orbit-center-inner">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="24" r="24" fill="#fde8e7"/>
+                <path d="M24 12a6 6 0 1 1 0 12 6 6 0 0 1 0-12zm0 14c-6.627 0-12 2.686-12 6v2h24v-2c0-3.314-5.373-6-12-6z" fill="#c8372d"/>
+              </svg>
+              <span>Dr. You</span>
+            </div>
+          </div>
 
-        <img src="hero-ecosystem.svg" alt="360 degree digital marketing ecosystem" width="560" height="480" fetchpriority="high" decoding="async" style="width:100%;height:auto;display:block;" />
+          <!-- Orbit ring -->
+          <div class="orbit-ring"></div>
 
+          <!-- Card 1: Instagram -->
+          <div class="orbit-card-wrap card-pos-1">
+            <div class="orbit-card">
+              <div class="oc-header" style="background:#e1306c;">
+                <svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.97.24 2.43.403a4.9 4.9 0 0 1 1.772 1.153 4.9 4.9 0 0 1 1.153 1.772c.163.46.35 1.26.403 2.43.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.054 1.17-.24 1.97-.403 2.43a4.9 4.9 0 0 1-1.153 1.772 4.9 4.9 0 0 1-1.772 1.153c-.46.163-1.26.35-2.43.403-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.054-1.97-.24-2.43-.403a4.9 4.9 0 0 1-1.772-1.153A4.9 4.9 0 0 1 1.67 19.43c-.163-.46-.35-1.26-.403-2.43C1.21 15.734 1.2 15.354 1.2 12.15s.012-3.584.07-4.85c.054-1.17.24-1.97.403-2.43A4.9 4.9 0 0 1 2.826 3.1a4.9 4.9 0 0 1 1.772-1.153c.46-.163 1.26-.35 2.43-.403C8.294 1.487 8.674 1.476 11.878 1.476h.122zm0 2.163c-3.148 0-3.504.011-4.756.068-1.146.052-1.768.24-2.182.398a3.65 3.65 0 0 0-1.358.883 3.65 3.65 0 0 0-.883 1.358c-.158.414-.346 1.036-.398 2.182C3.274 10.352 3.263 10.708 3.263 12c0 3.148.011 3.504.068 4.756.052 1.146.24 1.768.398 2.182a3.65 3.65 0 0 0 .883 1.358 3.65 3.65 0 0 0 1.358.883c.414.158 1.036.346 2.182.398C9.404 21.63 9.76 21.64 12 21.64s2.596-.011 3.848-.068c1.146-.052 1.768-.24 2.182-.398a3.65 3.65 0 0 0 1.358-.883 3.65 3.65 0 0 0 .883-1.358c.158-.414.346-1.036.398-2.182.057-1.252.068-1.608.068-4.756s-.011-3.504-.068-4.756c-.052-1.146-.24-1.768-.398-2.182a3.65 3.65 0 0 0-.883-1.358 3.65 3.65 0 0 0-1.358-.883c-.414-.158-1.036-.346-2.182-.398C14.596 4.337 14.24 4.326 12 4.326zM12 7a5 5 0 1 1 0 10A5 5 0 0 1 12 7zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm4.5-2.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"/></svg>
+                <span>Reels</span>
+              </div>
+              <div class="oc-body">
+                <div class="oc-img-placeholder" style="background:linear-gradient(135deg,#f9a8d4,#fda4af);"></div>
+                <div class="oc-text">
+                  <div class="oc-title">Understanding Thyroid Issues</div>
+                  <div class="oc-meta">Dr. Anjali's Health Hub · 12.4k views</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: YouTube -->
+          <div class="orbit-card-wrap card-pos-2">
+            <div class="orbit-card">
+              <div class="oc-header" style="background:#ff0000;">
+                <svg viewBox="0 0 24 24" fill="#fff"><path d="M23.5 6.2s-.233-1.644-.947-2.366c-.906-.948-1.921-.953-2.386-1.009C17.047 2.6 12 2.6 12 2.6s-5.047 0-8.167.225c-.465.056-1.48.061-2.386 1.009C.733 4.556.5 6.2.5 6.2S.267 8.107.267 10.013v1.76c0 1.907.233 3.813.233 3.813s.233 1.644.947 2.366c.906.948 2.096.918 2.626 1.017C5.6 19.2 12 19.267 12 19.267s5.053-.008 8.167-.233c.465-.056 1.48-.061 2.386-1.009.714-.722.947-2.366.947-2.366s.233-1.906.233-3.813v-1.76C23.733 8.107 23.5 6.2 23.5 6.2zM9.733 14.533V8.6l6.4 2.973-6.4 2.96z"/></svg>
+                <span>YouTube</span>
+              </div>
+              <div class="oc-body">
+                <div class="oc-img-placeholder" style="background:linear-gradient(135deg,#fca5a5,#fdba74);"></div>
+                <div class="oc-text">
+                  <div class="oc-title">Hypertension: Management & Care</div>
+                  <div class="oc-meta">105k Views · 7.1k Likes</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Google My Business -->
+          <div class="orbit-card-wrap card-pos-3">
+            <div class="orbit-card">
+              <div class="oc-header" style="background:#fff; border-bottom:1px solid #e5e7eb;">
+                <svg viewBox="0 0 24 24" style="width:18px;height:18px;"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                <span style="color:#111;font-weight:700;">Dr. Anjali's Clinic</span>
+              </div>
+              <div class="oc-body">
+                <div class="oc-gmb-stars">★★★★★ <span style="color:#64748b;font-size:0.65rem;">112 Reviews</span></div>
+                <div class="oc-img-placeholder" style="background:linear-gradient(135deg,#bbf7d0,#6ee7b7);height:40px;border-radius:6px;"></div>
+                <div class="oc-text">
+                  <div class="oc-title" style="font-size:0.65rem;">Dr. Anjali's Clinic · City Road, 343004</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Website -->
+          <div class="orbit-card-wrap card-pos-4">
+            <div class="orbit-card">
+              <div class="oc-header" style="background:#f8fafc; border-bottom:1px solid #e5e7eb;">
+                <div style="display:flex;gap:4px;"><span style="width:8px;height:8px;border-radius:50%;background:#f87171;display:inline-block;"></span><span style="width:8px;height:8px;border-radius:50%;background:#fbbf24;display:inline-block;"></span><span style="width:8px;height:8px;border-radius:50%;background:#34d399;display:inline-block;"></span></div>
+                <span style="color:#64748b;font-size:0.6rem;margin-left:6px;">anjalisharma.clinic</span>
+              </div>
+              <div class="oc-body">
+                <div class="oc-img-placeholder" style="background:linear-gradient(135deg,#e0e7ff,#c7d2fe);height:36px;border-radius:4px;"></div>
+                <div class="oc-text">
+                  <div class="oc-title">Anjali Sharma Medical Clinic</div>
+                  <div class="oc-meta" style="display:flex;gap:4px;margin-top:4px;"><span style="background:#c8372d;color:#fff;font-size:0.55rem;padding:2px 6px;border-radius:4px;font-weight:700;">Book Now</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
 
     </section>
