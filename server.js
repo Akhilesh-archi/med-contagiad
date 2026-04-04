@@ -18,7 +18,8 @@ const mime = {
 };
 
 http.createServer((req, res) => {
-  const filePath = path.join(ROOT, req.url === '/' ? 'index.html' : req.url);
+  const urlPath = req.url.split('?')[0].split('#')[0];
+  const filePath = path.join(ROOT, urlPath === '/' ? 'index.html' : urlPath);
   fs.readFile(filePath, (err, data) => {
     if (err) {
       res.writeHead(404, { 'Content-Type': 'text/plain' });
