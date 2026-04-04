@@ -4,7 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Become the #1 doctor in your city within 90 days. med.ContagiAd offers a 360° medical marketing & branding system for doctors and practitioners across India." />
-  <title>Become the #1 Practitioner in Your City</title>
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://med.contagiad.com/" />
+
+  <title>Become the #1 Practitioner in Your City | med.ContagiAd</title>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://med.contagiad.com/" />
+  <meta property="og:title" content="Become the #1 Practitioner in Your City | med.ContagiAd" />
+  <meta property="og:description" content="Become the #1 doctor in your city within 90 days. med.ContagiAd offers a 360° medical marketing & branding system for doctors across India." />
+  <meta property="og:image" content="https://med.contagiad.com/images/doctor.png" />
+  <meta property="og:site_name" content="med.ContagiAd" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Become the #1 Practitioner in Your City | med.ContagiAd" />
+  <meta name="twitter:description" content="Become the #1 doctor in your city within 90 days with our 360° medical marketing & branding system." />
+  <meta name="twitter:image" content="https://med.contagiad.com/images/doctor.png" />
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"med.ContagiAd","url":"https://med.contagiad.com","description":"360° medical marketing and branding system for doctors and practitioners across India.","telephone":"+911169310807","areaServed":"IN","serviceType":"Medical Marketing & Branding"}</script>
+
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <!-- Preconnect for fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,6 +33,8 @@
   <!-- DNS prefetch for third-party assets -->
   <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
   <link rel="dns-prefetch" href="https://randomuser.me" />
+  <!-- Preload critical local image -->
+  <link rel="preload" as="image" href="images/doctor.png" />
   <!-- Load fonts async to avoid render-blocking -->
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" media="print" onload="this.media='all'" />
@@ -791,8 +814,8 @@
 
     .orbit-center {
       position: absolute;
-      width: 155px;
-      height: 155px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       overflow: hidden;
       border: 4px solid #fff;
@@ -803,13 +826,13 @@
     .orbit-card-wrap {
       position: absolute;
       --r: 148px;
-      animation: orbit 80s linear infinite;
+      animation: orbit 120s linear infinite;
       z-index: 3;
     }
     .card-pos-1 { animation-delay: 0s; }
-    .card-pos-2 { animation-delay: -20s; }
-    .card-pos-3 { animation-delay: -40s; }
-    .card-pos-4 { animation-delay: -60s; }
+    .card-pos-2 { animation-delay: -30s; }
+    .card-pos-3 { animation-delay: -60s; }
+    .card-pos-4 { animation-delay: -90s; }
 
     .orbit-card {
       width: 128px;
@@ -1083,7 +1106,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
           <!-- Centre -->
           <div class="orbit-center">
-            <img src="images/doctor.png" alt="Doctor" fetchpriority="high" decoding="async" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;border-radius:50%;" />
+            <img src="images/doctor.png" alt="Doctor - med.ContagiAd" fetchpriority="high" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;border-radius:50%;" />
           </div>
 
           <!-- Orbit ring -->
@@ -1091,52 +1114,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
           <!-- Card 1: Instagram -->
           <div class="orbit-card-wrap card-pos-1">
-            <div class="orbit-card">
-              <div class="oc-header" style="background:#e1306c;">
-                <svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.97.24 2.43.403a4.9 4.9 0 0 1 1.772 1.153 4.9 4.9 0 0 1 1.153 1.772c.163.46.35 1.26.403 2.43.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.054 1.17-.24 1.97-.403 2.43a4.9 4.9 0 0 1-1.153 1.772 4.9 4.9 0 0 1-1.772 1.153c-.46.163-1.26.35-2.43.403-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.054-1.97-.24-2.43-.403a4.9 4.9 0 0 1-1.772-1.153A4.9 4.9 0 0 1 1.67 19.43c-.163-.46-.35-1.26-.403-2.43C1.21 15.734 1.2 15.354 1.2 12.15s.012-3.584.07-4.85c.054-1.17.24-1.97.403-2.43A4.9 4.9 0 0 1 2.826 3.1a4.9 4.9 0 0 1 1.772-1.153c.46-.163 1.26-.35 2.43-.403C8.294 1.487 8.674 1.476 11.878 1.476h.122zm0 2.163c-3.148 0-3.504.011-4.756.068-1.146.052-1.768.24-2.182.398a3.65 3.65 0 0 0-1.358.883 3.65 3.65 0 0 0-.883 1.358c-.158.414-.346 1.036-.398 2.182C3.274 10.352 3.263 10.708 3.263 12c0 3.148.011 3.504.068 4.756.052 1.146.24 1.768.398 2.182a3.65 3.65 0 0 0 .883 1.358 3.65 3.65 0 0 0 1.358.883c.414.158 1.036.346 2.182.398C9.404 21.63 9.76 21.64 12 21.64s2.596-.011 3.848-.068c1.146-.052 1.768-.24 2.182-.398a3.65 3.65 0 0 0 1.358-.883 3.65 3.65 0 0 0 .883-1.358c.158-.414.346-1.036.398-2.182.057-1.252.068-1.608.068-4.756s-.011-3.504-.068-4.756c-.052-1.146-.24-1.768-.398-2.182a3.65 3.65 0 0 0-.883-1.358 3.65 3.65 0 0 0-1.358-.883c-.414-.158-1.036-.346-2.182-.398C14.596 4.337 14.24 4.326 12 4.326zM12 7a5 5 0 1 1 0 10A5 5 0 0 1 12 7zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm4.5-2.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"/></svg>
-                <span>Reels</span>
-              </div>
-              <div class="oc-body">
-                <div class="oc-img-placeholder" style="overflow:hidden;"><img src="https://images.unsplash.com/photo-1651008376811-b90baee60c1f?w=200&h=120&fit=crop&auto=format" alt="Doctor reel" style="width:100%;height:100%;object-fit:cover;" loading="lazy" decoding="async"/></div>
-                <div class="oc-text">
-                  <div class="oc-title">Understanding Thyroid Issues</div>
-                  <div class="oc-meta">Dr. Anjali's Health Hub · 12.4k views</div>
-                </div>
-              </div>
+            <div class="orbit-card" style="overflow:hidden;width:120px;">
+              <img src="images/doctor=instareel-mockup.png" alt="Instagram Reels mockup" style="width:100%;display:block;object-fit:cover;" loading="lazy" decoding="async"/>
             </div>
           </div>
 
           <!-- Card 2: YouTube -->
           <div class="orbit-card-wrap card-pos-2">
-            <div class="orbit-card">
-              <div class="oc-header" style="background:#ff0000;">
-                <svg viewBox="0 0 24 24" fill="#fff"><path d="M23.5 6.2s-.233-1.644-.947-2.366c-.906-.948-1.921-.953-2.386-1.009C17.047 2.6 12 2.6 12 2.6s-5.047 0-8.167.225c-.465.056-1.48.061-2.386 1.009C.733 4.556.5 6.2.5 6.2S.267 8.107.267 10.013v1.76c0 1.907.233 3.813.233 3.813s.233 1.644.947 2.366c.906.948 2.096.918 2.626 1.017C5.6 19.2 12 19.267 12 19.267s5.053-.008 8.167-.233c.465-.056 1.48-.061 2.386-1.009.714-.722.947-2.366.947-2.366s.233-1.906.233-3.813v-1.76C23.733 8.107 23.5 6.2 23.5 6.2zM9.733 14.533V8.6l6.4 2.973-6.4 2.96z"/></svg>
-                <span>YouTube</span>
-              </div>
-              <div class="oc-body">
-                <div class="oc-img-placeholder" style="overflow:hidden;"><img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=200&h=120&fit=crop&auto=format" alt="Medical YouTube video" style="width:100%;height:100%;object-fit:cover;" loading="lazy" decoding="async"/></div>
-                <div class="oc-text">
-                  <div class="oc-title">Hypertension: Management & Care</div>
-                  <div class="oc-meta">105k Views · 7.1k Likes</div>
-                </div>
-              </div>
+            <div class="orbit-card" style="overflow:hidden;width:150px;">
+              <img src="images/doctors-YT-mockup.png" alt="YouTube mockup" style="width:100%;display:block;object-fit:cover;" loading="lazy" decoding="async"/>
             </div>
           </div>
 
           <!-- Card 3: Google My Business -->
           <div class="orbit-card-wrap card-pos-3">
-            <div class="orbit-card">
-              <div class="oc-header" style="background:#fff; border-bottom:1px solid #e5e7eb;">
-                <svg viewBox="0 0 24 24" style="width:18px;height:18px;"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-                <span style="color:#111;font-weight:700;">Dr. Anjali's Clinic</span>
-              </div>
-              <div class="oc-body">
-                <div class="oc-gmb-stars">★★★★★ <span style="color:#64748b;font-size:0.65rem;">112 Reviews</span></div>
-                <div class="oc-img-placeholder" style="overflow:hidden;height:40px;border-radius:6px;"><img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=200&h=80&fit=crop&auto=format" alt="Clinic building" style="width:100%;height:100%;object-fit:cover;" loading="lazy" decoding="async"/></div>
-                <div class="oc-text">
-                  <div class="oc-title" style="font-size:0.65rem;">Dr. Anjali's Clinic · City Road, 343004</div>
-                </div>
-              </div>
+            <div class="orbit-card" style="overflow:hidden;width:165px;">
+              <img src="images/docotor-GMB-mockup.png" alt="Google My Business mockup" style="width:100%;display:block;object-fit:cover;" loading="lazy" decoding="async"/>
             </div>
           </div>
 
@@ -1145,7 +1138,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="orbit-card">
               <div class="oc-header" style="background:#f8fafc; border-bottom:1px solid #e5e7eb;">
                 <div style="display:flex;gap:4px;"><span style="width:8px;height:8px;border-radius:50%;background:#f87171;display:inline-block;"></span><span style="width:8px;height:8px;border-radius:50%;background:#fbbf24;display:inline-block;"></span><span style="width:8px;height:8px;border-radius:50%;background:#34d399;display:inline-block;"></span></div>
-                <span style="color:#64748b;font-size:0.6rem;margin-left:6px;">anjalisharma.clinic</span>
+                <span style="color:#64748b;font-size:0.6rem;margin-left:6px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:80px;display:inline-block;">anjalisharma.clinic</span>
               </div>
               <div style="overflow:hidden;line-height:0;">
                 <img src="images/doctors-website-mockup.png" alt="Anjali Sharma Medical Clinic website" style="width:100%;display:block;object-fit:cover;" loading="lazy" decoding="async"/>
