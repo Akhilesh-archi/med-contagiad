@@ -26,20 +26,15 @@
   <!-- Schema.org Structured Data -->
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"med.ContagiAd","url":"https://med.contagiad.com","description":"360° medical marketing and branding system for doctors and practitioners across India.","telephone":"+911169310807","areaServed":"IN","serviceType":"Medical Marketing & Branding"}</script>
 
+  <meta name="theme-color" content="#c8372d" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <!-- Preconnect for fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <!-- DNS prefetch for third-party assets -->
+  <!-- DNS prefetch for GTM -->
   <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-  <link rel="dns-prefetch" href="https://randomuser.me" />
-  <!-- Preload all hero images so orbit cards appear instantly -->
-  <link rel="preload" as="image" href="images/doctor.png" />
-  <link rel="preload" as="image" href="images/doctor=instareel-mockup.png" />
-  <link rel="preload" as="image" href="images/doctors-YT-mockup.png" />
-  <link rel="preload" as="image" href="images/docotor-GMB-mockup.png" />
-  <link rel="preload" as="image" href="images/doctors-website-mockup.png" />
-  <link rel="preload" as="image" href="images/doctor-recpetionist-mockup.jpeg" />
+  <!-- Preload LCP image only -->
+  <link rel="preload" as="image" href="images/doctor.png" fetchpriority="high" />
   <!-- Load fonts async to avoid render-blocking -->
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" media="print" onload="this.media='all'" />
@@ -1126,7 +1121,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span>Instagram</span>
               </div>
               <div style="overflow:hidden;line-height:0;">
-                <img src="images/doctor=instareel-mockup.png" alt="Instagram Reels mockup" style="width:100%;display:block;object-fit:cover;" loading="eager" decoding="async"/>
+                <img src="images/doctor=instareel-mockup.png" alt="Instagram Reels mockup" style="width:100%;display:block;object-fit:cover;" loading="eager" decoding="async" fetchpriority="low"/>
               </div>
             </div>
           </div>
@@ -1139,7 +1134,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span>YouTube</span>
               </div>
               <div style="overflow:hidden;line-height:0;">
-                <img src="images/doctors-YT-mockup.png" alt="YouTube mockup" style="width:100%;display:block;object-fit:cover;" loading="eager" decoding="async"/>
+                <img src="images/doctors-YT-mockup.png" alt="YouTube mockup" style="width:100%;display:block;object-fit:cover;" loading="eager" decoding="async" fetchpriority="low"/>
               </div>
             </div>
           </div>
@@ -1152,7 +1147,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span style="color:#111;font-weight:700;">Physician near me</span>
               </div>
               <div style="overflow:hidden;line-height:0;">
-                <img src="images/docotor-GMB-mockup.png" alt="Google My Business mockup" style="width:100%;display:block;object-fit:cover;" loading="eager" decoding="async"/>
+                <img src="images/docotor-GMB-mockup.png" alt="Google My Business mockup" style="width:100%;display:block;object-fit:cover;" loading="eager" decoding="async" fetchpriority="low"/>
               </div>
             </div>
           </div>
@@ -1165,7 +1160,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span style="color:#64748b;font-size:0.6rem;margin-left:6px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:80px;display:inline-block;">anjalicare.com</span>
               </div>
               <div style="overflow:hidden;line-height:0;">
-                <img src="images/doctors-website-mockup.png" alt="Anjali Sharma Medical Clinic website" style="width:100%;display:block;object-fit:cover;" loading="eager" decoding="async"/>
+                <img src="images/doctors-website-mockup.png" alt="Anjali Sharma Medical Clinic website" style="width:100%;display:block;object-fit:cover;" loading="eager" decoding="async" fetchpriority="low"/>
               </div>
             </div>
           </div>
@@ -1178,7 +1173,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span>A.I Receptionist</span>
               </div>
               <div style="overflow:hidden;line-height:0;">
-                <img src="images/doctor-recpetionist-mockup.jpeg" alt="AI Receptionist" style="width:100%;display:block;object-fit:cover;" loading="eager" decoding="async"/>
+                <img src="images/doctor-recpetionist-mockup.jpeg" alt="AI Receptionist" style="width:100%;display:block;object-fit:cover;" loading="eager" decoding="async" fetchpriority="low"/>
               </div>
             </div>
           </div>
