@@ -957,18 +957,35 @@
         gap: 32px !important;
       }
 
-      /* Feature row children: remove order overrides so DOM order is preserved */
-      .feat-row > [style*="order: 1"],
-      .feat-row > [style*="order:1"],
-      .feat-row > [style*="order: 2"],
-      .feat-row > [style*="order:2"] {
-        order: unset !important;
-      }
-
-      /* Infographic cards in feature rows: full width */
+      /* Feature row children: all full-width stacked */
       .feat-row > div {
         min-width: unset !important;
         width: 100% !important;
+        flex: 0 0 100% !important;
+      }
+
+      /* Image/infographic always appears FIRST on mobile */
+      .feat-row > div[style*="border-radius:12px"] {
+        order: -1 !important;
+      }
+
+      /* Text content always appears SECOND on mobile */
+      .feat-row > div[style*="flex: 1; min-width: 280px"] {
+        order: 0 !important;
+      }
+
+      /* Final recap: stack image above text on mobile */
+      .final-recap {
+        flex-direction: column !important;
+      }
+      .final-recap > div:last-child {
+        order: -1 !important;
+        aspect-ratio: 4/3 !important;
+      }
+
+      /* Section headings: left-align on mobile */
+      section h2 {
+        text-align: left !important;
       }
 
       /* Section padding reduction */
@@ -1706,15 +1723,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="grid-3col" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 40px;">
         <!-- Mockup 1 -->
         <div style="border: 1px solid #e4e0e0; border-radius: 12px; overflow: hidden; aspect-ratio: 4/3;">
-          <img src="images/dental-website-mockup.png" alt="Dental website mockup" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <img src="images/dental-website-mockup.png" alt="Dental website mockup" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;" />
         </div>
         <!-- Mockup 2 -->
         <div style="border: 1px solid #e4e0e0; border-radius: 12px; overflow: hidden; aspect-ratio: 4/3;">
-          <img src="images/clinic-website-website-mockup.png" alt="Clinic website mockup" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <img src="images/clinic-website-website-mockup.png" alt="Clinic website mockup" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;" />
         </div>
         <!-- Mockup 3 -->
         <div style="border: 1px solid #e4e0e0; border-radius: 12px; overflow: hidden; aspect-ratio: 4/3;">
-          <img src="images/dermatologist-website-mockup.png" alt="Dermatologist website mockup" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <img src="images/dermatologist-website-mockup.png" alt="Dermatologist website mockup" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;" />
         </div>
       </div>
       <div style="text-align: center;">
@@ -1958,7 +1975,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- FINAL RECAP / URGENCY SECTION -->
   <section style="padding: 80px 24px; background: #fff;">
-    <div class="feat-row" style="max-width: 960px; margin: 0 auto; display: flex; align-items: center; gap: 64px; flex-wrap: wrap;">
+    <div class="feat-row final-recap" style="max-width: 960px; margin: 0 auto; display: flex; align-items: center; gap: 64px; flex-wrap: wrap;">
       <!-- Left: text -->
       <div style="flex: 1; min-width: 280px;">
         <p style="font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #6b6b6b; margin-bottom: 14px;">Why act now</p>
