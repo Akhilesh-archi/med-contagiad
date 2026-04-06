@@ -47,7 +47,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" media="print" onload="this.media='all'" />
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" /></noscript>
   <!-- GTM deferred to after paint -->
-  <script>window.addEventListener('load',function(){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WSHSJCL6');});</script>
+  <script>window.addEventListener('load',function(){var f=function(){(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WSHSJCL6');};'requestIdleCallback' in window?requestIdleCallback(f,{timeout:2000}):setTimeout(f,200);});</script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -62,10 +62,20 @@
       --white:       #ffffff;
     }
 
+    /* Font metric fallback — makes Arial match Inter's metrics so the swap causes near-zero CLS */
+    @font-face {
+      font-family: 'Inter-fallback';
+      src: local('Arial');
+      size-adjust: 107%;
+      ascent-override: 90%;
+      descent-override: 22%;
+      line-gap-override: 0%;
+    }
+
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Inter', 'Inter-fallback', sans-serif;
       background: var(--white);
       color: var(--ink);
       -webkit-font-smoothing: antialiased;
@@ -1077,18 +1087,7 @@
       will-change: transform;
     }
 
-    /* content-visibility: skip rendering off-screen sections */
-    .testimonials,
-    .pas {
-      content-visibility: auto;
-      contain-intrinsic-size: 0 700px;
-    }
-
-    /* Generic class for below-fold inline sections */
-    .cv-auto {
-      content-visibility: auto;
-      contain-intrinsic-size: 0 600px;
-    }
+    /* content-visibility removed — inaccurate intrinsic-size estimates were causing CLS */
 
     /* ── SCROLL-TO-TOP BUTTON ── */
     #scroll-top {
