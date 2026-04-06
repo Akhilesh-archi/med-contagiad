@@ -938,6 +938,107 @@
       .pas { padding: 60px 20px; }
       .pas-cta-block { padding: 28px 20px; }
     }
+
+    /* ─── MOBILE: NEW SECTIONS ─── */
+    @media (max-width: 768px) {
+
+      /* 3-column grids → single column */
+      .grid-3col {
+        grid-template-columns: 1fr !important;
+      }
+
+      /* Testimonials grid */
+      .testimonials-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      /* Feature alternating rows: reduce gap when stacked */
+      .feat-row {
+        gap: 32px !important;
+      }
+
+      /* Feature row children: remove order overrides so DOM order is preserved */
+      .feat-row > [style*="order: 1"],
+      .feat-row > [style*="order:1"],
+      .feat-row > [style*="order: 2"],
+      .feat-row > [style*="order:2"] {
+        order: unset !important;
+      }
+
+      /* Infographic cards in feature rows: full width */
+      .feat-row > div {
+        min-width: unset !important;
+        width: 100% !important;
+      }
+
+      /* Section padding reduction */
+      section[style*="padding: 80px"] {
+        padding-top: 52px !important;
+        padding-bottom: 52px !important;
+      }
+
+      /* FAQ details/summary touch targets */
+      details summary {
+        min-height: 48px;
+        padding: 14px 0 !important;
+      }
+
+      /* Final recap image placeholder: reduce height */
+      .feat-row > [style*="aspect-ratio: 4/3"] {
+        aspect-ratio: 3/2 !important;
+        min-width: unset !important;
+        width: 100% !important;
+      }
+
+      /* How it works / step cards: full width */
+      .grid-3col > div {
+        width: 100%;
+      }
+
+      /* Testimonials section padding */
+      .testimonials {
+        padding: 52px 20px 60px !important;
+      }
+      .testimonials-inner {
+        padding: 0 !important;
+      }
+
+      /* Website mockup images: maintain aspect ratio */
+      .grid-3col > div[style*="aspect-ratio"] {
+        aspect-ratio: 3/2 !important;
+      }
+
+      /* Social proof cards gap */
+      .grid-3col {
+        gap: 16px !important;
+      }
+
+      /* PAS CTA block */
+      .pas-cta-block {
+        padding: 28px 20px !important;
+      }
+      .pas-cta-btn {
+        width: 100% !important;
+        text-align: center !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      /* Feature row infographic cards: clip overflow cleanly */
+      .feat-row > div[style*="border-radius: 12px"] {
+        border-radius: 10px !important;
+      }
+
+      /* Tighten section headings */
+      .grid-3col > div h3 {
+        font-size: 0.9rem !important;
+      }
+
+      /* FAQ accordion question text */
+      details summary {
+        font-size: 0.88rem !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -1231,7 +1332,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div style="max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 80px;">
 
       <!-- Row 1: Image left, text right -->
-      <div style="display: flex; align-items: center; gap: 64px; flex-wrap: wrap;">
+      <div class="feat-row" style="display: flex; align-items: center; gap: 64px; flex-wrap: wrap;">
         <!-- Infographic 1: Google Local Pack -->
         <div style="flex:1;min-width:280px;border-radius:12px;overflow:hidden;border:1px solid #e4e0e0;box-shadow:0 4px 20px rgba(0,0,0,0.07);background:#fff;font-family:'Inter',sans-serif;line-height:normal;">
           <!-- Search bar -->
@@ -1307,7 +1408,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <!-- Row 2: Text left, image right -->
-      <div style="display: flex; align-items: center; gap: 64px; flex-wrap: wrap;">
+      <div class="feat-row" style="display: flex; align-items: center; gap: 64px; flex-wrap: wrap;">
         <div style="flex: 1; min-width: 280px; order: 1;">
           <p style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); margin-bottom: 10px;">Google Ads</p>
           <h2 style="font-size: clamp(1.1rem, 2vw, 1.35rem); font-weight: 900; line-height: 1.2; letter-spacing: -0.01em; color: #0f0f0f; margin-bottom: 12px;">Reach your patients when<br>they need you the most.</h2>
@@ -1368,7 +1469,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <!-- Row 3: Image left, text right -->
-      <div style="display: flex; align-items: center; gap: 64px; flex-wrap: wrap;">
+      <div class="feat-row" style="display: flex; align-items: center; gap: 64px; flex-wrap: wrap;">
         <!-- Infographic 3: Platform Performance Dashboard -->
         <div style="flex:1;min-width:280px;border-radius:12px;border:1px solid #e4e0e0;box-shadow:0 4px 20px rgba(0,0,0,0.07);background:#fff;font-family:'Inter',sans-serif;line-height:normal;padding:20px;">
           <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#5f6368;margin-bottom:4px;">90-Day Results</div>
@@ -1426,7 +1527,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
       <!-- Row 4: Text left, image right -->
-      <div style="display: flex; align-items: center; gap: 64px; flex-wrap: wrap;">
+      <div class="feat-row" style="display: flex; align-items: center; gap: 64px; flex-wrap: wrap;">
         <!-- Infographic 4: AI Receptionist Call Log -->
         <div style="flex:1;min-width:280px;border-radius:12px;border:1px solid #e4e0e0;box-shadow:0 4px 20px rgba(0,0,0,0.07);background:#fff;font-family:'Inter',sans-serif;line-height:normal;padding:20px;order:2;">
           <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#5f6368;margin-bottom:4px;">AI Receptionist · Live Dashboard</div>
@@ -1485,7 +1586,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <!-- Row 5: Image left, text right -->
-      <div style="display: flex; align-items: center; gap: 64px; flex-wrap: wrap;">
+      <div class="feat-row" style="display: flex; align-items: center; gap: 64px; flex-wrap: wrap;">
         <div style="flex: 1; min-width: 280px; order: 2;">
           <p style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); margin-bottom: 10px;">Content Marketing</p>
           <h2 style="font-size: clamp(1.1rem, 2vw, 1.35rem); font-weight: 900; line-height: 1.2; letter-spacing: -0.01em; color: #0f0f0f; margin-bottom: 12px;">An article that builds your reputation and TOFU.</h2>
@@ -1539,7 +1640,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <!-- Row 6: Text left, image right -->
-      <div style="display: flex; align-items: center; gap: 64px; flex-wrap: wrap;">
+      <div class="feat-row" style="display: flex; align-items: center; gap: 64px; flex-wrap: wrap;">
         <!-- Infographic 6: PageSpeed / Mobile Website -->
         <div style="flex:1;min-width:280px;border-radius:12px;border:1px solid #e4e0e0;box-shadow:0 4px 20px rgba(0,0,0,0.07);background:#fff;font-family:'Inter',sans-serif;line-height:normal;padding:20px;order:2;">
           <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#5f6368;margin-bottom:4px;">Website Performance</div>
@@ -1602,7 +1703,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section style="padding: 80px 24px; background: #f9f8f7;">
     <div style="max-width: 960px; margin: 0 auto;">
       <h2 style="font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 900; letter-spacing: -0.02em; color: #0f0f0f; text-align: center; margin-bottom: 48px;">Website that represents you</h2>
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 40px;">
+      <div class="grid-3col" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 40px;">
         <!-- Mockup 1 -->
         <div style="border: 1px solid #e4e0e0; border-radius: 12px; overflow: hidden; aspect-ratio: 4/3;">
           <img src="images/dental-website-mockup.png" alt="Dental website mockup" style="width:100%;height:100%;object-fit:cover;display:block;" />
@@ -1622,11 +1723,78 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
+  <!-- DIFFERENTIATORS SECTION -->
+  <section style="padding: 80px 24px; background: #fff;">
+    <div style="max-width: 960px; margin: 0 auto;">
+      <h2 style="font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 900; letter-spacing: -0.02em; color: #0f0f0f; text-align: center; line-height: 1.25; margin-bottom: 52px;">Six reasons doctors across India<br>choose med.ContagiAd</h2>
+      <div class="grid-3col" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 40px;">
+
+        <!-- Card 1 -->
+        <div style="background: #f9f8f7; border: 1px solid #e4e0e0; border-radius: 12px; padding: 32px 24px;">
+          <div style="width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg,#c8372d,#9b1d14); display: grid; place-items: center; margin-bottom: 16px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </div>
+          <h3 style="font-size: 0.95rem; font-weight: 800; color: #0f0f0f; margin-bottom: 8px;">We work exclusively in your city</h3>
+          <p style="font-size: 0.82rem; color: #6b6b6b; line-height: 1.7;">We never take on your direct competitor in the same city. Your growth is protected — what we build for you stays yours.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div style="background: #f9f8f7; border: 1px solid #e4e0e0; border-radius: 12px; padding: 32px 24px;">
+          <div style="width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg,#c8372d,#9b1d14); display: grid; place-items: center; margin-bottom: 16px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+          </div>
+          <h3 style="font-size: 0.95rem; font-weight: 800; color: #0f0f0f; margin-bottom: 8px;">Built only for medical practitioners</h3>
+          <p style="font-size: 0.82rem; color: #6b6b6b; line-height: 1.7;">We do not work with restaurants, salons, or e-commerce brands. Every strategy, every campaign, every tool is built specifically for doctors.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div style="background: #f9f8f7; border: 1px solid #e4e0e0; border-radius: 12px; padding: 32px 24px;">
+          <div style="width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg,#c8372d,#9b1d14); display: grid; place-items: center; margin-bottom: 16px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg>
+          </div>
+          <h3 style="font-size: 0.95rem; font-weight: 800; color: #0f0f0f; margin-bottom: 8px;">Full 360° system — not just ads</h3>
+          <p style="font-size: 0.82rem; color: #6b6b6b; line-height: 1.7;">Website, SEO, Google Ads, social media, content marketing, and AI receptionist — all managed under one roof, working together.</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div style="background: #f9f8f7; border: 1px solid #e4e0e0; border-radius: 12px; padding: 32px 24px;">
+          <div style="width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg,#c8372d,#9b1d14); display: grid; place-items: center; margin-bottom: 16px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z"/></svg>
+          </div>
+          <h3 style="font-size: 0.95rem; font-weight: 800; color: #0f0f0f; margin-bottom: 8px;">Results in 30 days or we work for free</h3>
+          <p style="font-size: 0.82rem; color: #6b6b6b; line-height: 1.7;">We stand behind our work. If you don't see measurable improvement in your online presence within the first 30 days, we continue at no cost until you do.</p>
+        </div>
+
+        <!-- Card 5 -->
+        <div style="background: #f9f8f7; border: 1px solid #e4e0e0; border-radius: 12px; padding: 32px 24px;">
+          <div style="width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg,#c8372d,#9b1d14); display: grid; place-items: center; margin-bottom: 16px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
+          </div>
+          <h3 style="font-size: 0.95rem; font-weight: 800; color: #0f0f0f; margin-bottom: 8px;">No long-term lock-in</h3>
+          <p style="font-size: 0.82rem; color: #6b6b6b; line-height: 1.7;">We recommend 90 days to see real growth, but after that you stay because you want to — not because a contract forces you. Month-to-month flexibility, always.</p>
+        </div>
+
+        <!-- Card 6 -->
+        <div style="background: #f9f8f7; border: 1px solid #e4e0e0; border-radius: 12px; padding: 32px 24px;">
+          <div style="width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg,#c8372d,#9b1d14); display: grid; place-items: center; margin-bottom: 16px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.61 21 3 13.39 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.26.2 2.47.57 3.58.11.35.03.74-.24 1.02l-2.23 2.2z"/></svg>
+          </div>
+          <h3 style="font-size: 0.95rem; font-weight: 800; color: #0f0f0f; margin-bottom: 8px;">AI receptionist that never misses a call</h3>
+          <p style="font-size: 0.82rem; color: #6b6b6b; line-height: 1.7;">Everyone is using AI — your competitors are already leveraging it to answer calls and book appointments 24/7. Don't get left behind. Every missed call is a patient who booked elsewhere. It's time to let AI work for your clinic.</p>
+        </div>
+
+      </div>
+      <div style="text-align: center;">
+        <a href="consultation.html" style="display: inline-block; background: var(--red); color: #fff; font-family: inherit; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 13px 28px; border-radius: 8px; text-decoration: none; transition: background 0.18s;">Book Free Consultation</a>
+      </div>
+    </div>
+  </section>
+
   <!-- HOW IT WORKS SECTION -->
   <section style="padding: 80px 24px; background: #fff;">
     <div style="max-width: 960px; margin: 0 auto;">
       <h2 style="font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 900; letter-spacing: -0.02em; color: #0f0f0f; text-align: center; line-height: 1.2; margin-bottom: 52px;">Run your entire marketing campaign without<br>burning out or compromising family time on marketing.</h2>
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 40px;">
+      <div class="grid-3col" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 40px;">
         <!-- Step 1 -->
         <div style="background: #f9f8f7; border: 1px solid #e4e0e0; border-radius: 12px; padding: 32px 28px;">
           <div style="font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); margin-bottom: 12px;">Step 01</div>
@@ -1673,7 +1841,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div style="max-width: 960px; margin: 0 auto;">
       <p style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); text-align: center; margin-bottom: 10px;">What doctors say</p>
       <h2 style="font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 900; letter-spacing: -0.02em; color: #0f0f0f; text-align: center; margin-bottom: 48px;">Trusted by practitioners across India</h2>
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+      <div class="grid-3col" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
 
         <!-- Testimonial 1 -->
         <div style="background: #fff; border: 1px solid #e4e0e0; border-radius: 12px; padding: 28px 24px;">
@@ -1790,7 +1958,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- FINAL RECAP / URGENCY SECTION -->
   <section style="padding: 80px 24px; background: #fff;">
-    <div style="max-width: 960px; margin: 0 auto; display: flex; align-items: center; gap: 64px; flex-wrap: wrap;">
+    <div class="feat-row" style="max-width: 960px; margin: 0 auto; display: flex; align-items: center; gap: 64px; flex-wrap: wrap;">
       <!-- Left: text -->
       <div style="flex: 1; min-width: 280px;">
         <p style="font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #6b6b6b; margin-bottom: 14px;">Why act now</p>
