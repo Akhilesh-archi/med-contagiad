@@ -23,16 +23,23 @@
   <meta name="twitter:description" content="Become the #1 doctor in your city within 90 days with our 360° medical marketing & branding system." />
   <meta name="twitter:image" content="https://med.contagiad.com/images/doctor.png" />
 
-  <!-- Schema.org Structured Data -->
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"med.ContagiAd","url":"https://med.contagiad.com","description":"360° medical marketing and branding system for doctors and practitioners across India.","telephone":"+911169310807","areaServed":"IN","serviceType":"Medical Marketing & Branding"}</script>
+  <!-- Schema.org: LocalBusiness -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","@id":"https://med.contagiad.com/#business","name":"med.ContagiAd","url":"https://med.contagiad.com","telephone":"+911169310807","description":"360° medical marketing and branding system for doctors and practitioners across India. Local SEO, Google Ads, Social Media, AI Receptionist, and custom medical websites.","areaServed":{"@type":"Country","name":"India"},"knowsAbout":["Medical marketing","Healthcare branding","Local SEO for doctors","Medical Google Ads","Doctor social media marketing"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Medical Marketing Services","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Local SEO for Doctors"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Google Ads for Medical Practices"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Social Media Marketing for Doctors"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"AI Receptionist for Clinics"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Medical Practice Website Development"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Content Marketing for Healthcare"}}]}}</script>
+  <!-- Schema.org: FAQPage -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How soon can I expect to see results?","acceptedAnswer":{"@type":"Answer","text":"Most clients begin seeing measurable improvements in online visibility and patient enquiries within 30–60 days. Significant brand growth and consistent appointment flow typically build over 90 days as your campaigns gain traction."}},{"@type":"Question","name":"Do you work with all types of doctors and specialists?","acceptedAnswer":{"@type":"Answer","text":"Yes. We work with general practitioners, specialists, dentists, dermatologists, physiotherapists, and all other medical practitioners. Our strategies are customised to your specific specialty and city."}},{"@type":"Question","name":"What makes med.ContagiAd different from other marketing agencies?","acceptedAnswer":{"@type":"Answer","text":"We are exclusively focused on medical practitioners — not salons, restaurants, or e-commerce. Every strategy, tool, and campaign we build is designed for healthcare. We also offer exclusivity: we do not work with your direct competitors in the same city."}},{"@type":"Question","name":"Will I need to manage my own social media or ads?","acceptedAnswer":{"@type":"Answer","text":"No. We handle everything end-to-end — content creation, scheduling, ad management, reporting, and optimisation. Your only job is to treat your patients. We take care of the rest."}},{"@type":"Question","name":"Is there a long-term contract?","acceptedAnswer":{"@type":"Answer","text":"We recommend a minimum 90-day engagement to see meaningful results. After that, you are free to continue month-to-month. We believe in earning your trust through results, not locking you into contracts."}},{"@type":"Question","name":"How do I get started?","acceptedAnswer":{"@type":"Answer","text":"Simply book a free 30-minute consultation using the button on our website. One of our team members will walk you through exactly how we can grow your practice — with no pressure and no obligation."}}]}</script>
 
   <meta name="theme-color" content="#c8372d" />
+  <meta name="geo.region" content="IN" />
+  <meta name="geo.placename" content="India" />
+  <meta name="keywords" content="medical marketing India, doctor digital marketing, healthcare SEO, doctor branding, medical Google Ads, physician marketing, clinic marketing India" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <!-- Preconnect for fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <!-- DNS prefetch for GTM -->
+  <!-- DNS prefetch for GTM & external resources -->
   <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+  <link rel="dns-prefetch" href="https://randomuser.me" />
+  <link rel="preconnect" href="https://randomuser.me" />
   <!-- Preload LCP image only -->
   <link rel="preload" as="image" href="images/doctor.png" fetchpriority="high" />
   <!-- Load fonts async to avoid render-blocking -->
@@ -1059,6 +1066,49 @@
         font-size: 0.88rem !important;
       }
     }
+
+    /* ── PERFORMANCE ── */
+
+    /* GPU-composite the orbit animation */
+    .orbit-card-wrap {
+      will-change: transform;
+    }
+
+    /* content-visibility: skip rendering off-screen sections */
+    .testimonials,
+    .pas {
+      content-visibility: auto;
+      contain-intrinsic-size: 0 700px;
+    }
+
+    /* Generic class for below-fold inline sections */
+    .cv-auto {
+      content-visibility: auto;
+      contain-intrinsic-size: 0 600px;
+    }
+
+    /* ── SCROLL-TO-TOP BUTTON ── */
+    #scroll-top {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #e05c52, #c8372d);
+      border: none;
+      box-shadow: 0 4px 12px rgba(200,55,45,0.4);
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s, transform 0.2s;
+      z-index: 998;
+    }
+    #scroll-top.visible { opacity: 1; pointer-events: auto; }
+    #scroll-top:hover { transform: translateY(-2px); }
+    #scroll-top svg { width: 18px; height: 18px; fill: #fff; }
   </style>
 </head>
 <body>
@@ -1348,7 +1398,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
 
   <!-- FEATURES ALTERNATING SECTION -->
-  <section style="padding: 80px 24px; background: #fff;">
+  <section class="cv-auto" style="padding: 80px 24px; background: #fff;">
     <div style="max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 80px;">
 
       <!-- Row 1: Image left, text right -->
@@ -1720,21 +1770,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
 
   <!-- WEBSITE SHOWCASE SECTION -->
-  <section style="padding: 80px 24px; background: #f9f8f7;">
+  <section class="cv-auto" style="padding: 80px 24px; background: #f9f8f7;">
     <div style="max-width: 960px; margin: 0 auto;">
       <h2 style="font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 900; letter-spacing: -0.02em; color: #0f0f0f; margin-bottom: 48px;">Website that represents you</h2>
       <div class="grid-3col" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 40px;">
         <!-- Mockup 1 -->
         <div style="border: 1px solid #e4e0e0; border-radius: 12px; overflow: hidden; aspect-ratio: 4/3;">
-          <img src="images/dental-website-mockup.png" alt="Dental website mockup" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;" />
+          <img src="images/dental-website-mockup.png" alt="Dental clinic website design by med.ContagiAd" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;" />
         </div>
         <!-- Mockup 2 -->
         <div style="border: 1px solid #e4e0e0; border-radius: 12px; overflow: hidden; aspect-ratio: 4/3;">
-          <img src="images/clinic-website-website-mockup.png" alt="Clinic website mockup" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;" />
+          <img src="images/clinic-website-website-mockup.png" alt="Medical clinic website design by med.ContagiAd" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;" />
         </div>
         <!-- Mockup 3 -->
         <div style="border: 1px solid #e4e0e0; border-radius: 12px; overflow: hidden; aspect-ratio: 4/3;">
-          <img src="images/dermatologist-website-mockup.png" alt="Dermatologist website mockup" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;" />
+          <img src="images/dermatologist-website-mockup.png" alt="Dermatology clinic website design by med.ContagiAd" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;" />
         </div>
       </div>
       <div style="text-align: center;">
@@ -1744,7 +1794,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
 
   <!-- DIFFERENTIATORS SECTION -->
-  <section style="padding: 80px 24px; background: #fff;">
+  <section class="cv-auto" style="padding: 80px 24px; background: #fff;">
     <div style="max-width: 960px; margin: 0 auto;">
       <h2 style="font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 900; letter-spacing: -0.02em; color: #0f0f0f; line-height: 1.25; margin-bottom: 52px;">Six reasons doctors across India<br>choose med.ContagiAd</h2>
       <div class="grid-3col" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 40px;">
@@ -2018,7 +2068,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </a>
 
   <footer style="background:#0f0f0f;color:#9ca3af;text-align:center;padding:20px 24px;font-size:0.78rem;font-family:'Inter',sans-serif;">
-    <span>© 2025 med.ContagiAd. All rights reserved.</span>
+    <span>© 2026 med.ContagiAd. All rights reserved.</span>
     <span style="margin:0 10px;color:#4b5563;">·</span>
     <a href="privacy-policy.html" style="color:#9ca3af;text-decoration:none;transition:color 0.18s;" onmouseover="this.style.color='#c8372d'" onmouseout="this.style.color='#9ca3af'">Privacy Policy</a>
     <span style="margin:0 10px;color:#4b5563;">·</span>
