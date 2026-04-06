@@ -62,20 +62,10 @@
       --white:       #ffffff;
     }
 
-    /* Font metric fallback — makes Arial match Inter's metrics so the swap causes near-zero CLS */
-    @font-face {
-      font-family: 'Inter-fallback';
-      src: local('Arial');
-      size-adjust: 107%;
-      ascent-override: 90%;
-      descent-override: 22%;
-      line-gap-override: 0%;
-    }
-
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Inter', 'Inter-fallback', sans-serif;
+      font-family: 'Inter', sans-serif;
       background: var(--white);
       color: var(--ink);
       -webkit-font-smoothing: antialiased;
@@ -1087,7 +1077,16 @@
       will-change: transform;
     }
 
-    /* content-visibility removed — inaccurate intrinsic-size estimates were causing CLS */
+    /* content-visibility: auto with `auto` intrinsic-size — browser remembers actual height after first paint, preventing CLS */
+    .testimonials,
+    .pas {
+      content-visibility: auto;
+      contain-intrinsic-size: auto 700px;
+    }
+    .cv-auto {
+      content-visibility: auto;
+      contain-intrinsic-size: auto 600px;
+    }
 
     /* ── SCROLL-TO-TOP BUTTON ── */
     #scroll-top {
@@ -1228,7 +1227,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span>Instagram</span>
               </div>
               <div style="overflow:hidden;line-height:0;">
-                <img src="images/doctor=instareel-mockup.png" alt="Instagram Reels mockup" style="width:100%;display:block;object-fit:cover;" loading="eager" decoding="async" fetchpriority="low"/>
+                <img src="images/doctor=instareel-mockup.png" alt="Instagram Reels mockup" style="width:100%;display:block;object-fit:cover;" loading="lazy" decoding="async"/>
               </div>
             </div>
           </div>
@@ -1241,7 +1240,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span>YouTube</span>
               </div>
               <div style="overflow:hidden;line-height:0;">
-                <img src="images/doctors-YT-mockup.png" alt="YouTube mockup" style="width:100%;display:block;object-fit:cover;" loading="eager" decoding="async" fetchpriority="low"/>
+                <img src="images/doctors-YT-mockup.png" alt="YouTube mockup" style="width:100%;display:block;object-fit:cover;" loading="lazy" decoding="async"/>
               </div>
             </div>
           </div>
@@ -1254,7 +1253,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span style="color:#111;font-weight:700;">Physician near me</span>
               </div>
               <div style="overflow:hidden;line-height:0;">
-                <img src="images/docotor-GMB-mockup.png" alt="Google My Business mockup" style="width:100%;display:block;object-fit:cover;" loading="eager" decoding="async" fetchpriority="low"/>
+                <img src="images/docotor-GMB-mockup.png" alt="Google My Business mockup" style="width:100%;display:block;object-fit:cover;" loading="lazy" decoding="async"/>
               </div>
             </div>
           </div>
@@ -1267,7 +1266,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span style="color:#64748b;font-size:0.6rem;margin-left:6px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:80px;display:inline-block;">anjalicare.com</span>
               </div>
               <div style="overflow:hidden;line-height:0;">
-                <img src="images/doctors-website-mockup.png" alt="Anjali Sharma Medical Clinic website" style="width:100%;display:block;object-fit:cover;" loading="eager" decoding="async" fetchpriority="low"/>
+                <img src="images/doctors-website-mockup.png" alt="Anjali Sharma Medical Clinic website" style="width:100%;display:block;object-fit:cover;" loading="lazy" decoding="async"/>
               </div>
             </div>
           </div>
@@ -1280,7 +1279,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span>A.I Receptionist</span>
               </div>
               <div style="overflow:hidden;line-height:0;">
-                <img src="images/doctor-recpetionist-mockup.jpeg" alt="AI Receptionist" style="width:100%;display:block;object-fit:cover;" loading="eager" decoding="async" fetchpriority="low"/>
+                <img src="images/doctor-recpetionist-mockup.jpeg" alt="AI Receptionist" style="width:100%;display:block;object-fit:cover;" loading="lazy" decoding="async"/>
               </div>
             </div>
           </div>
