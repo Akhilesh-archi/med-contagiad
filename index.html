@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Become the #1 doctor in your city within 90 days. med.ContagiAd offers a 360° medical marketing & branding system for doctors and practitioners across India." />
+  <meta name="application-name" content="med.ContagiAd" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"med.ContagiAd","url":"https://med.contagiad.com"}</script>
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://med.contagiad.com/" />
 
@@ -1703,9 +1705,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section style="padding: 80px 24px; background: #f9f8f7;">
     <div style="max-width: 960px; margin: 0 auto;">
       <h2 style="font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 900; letter-spacing: -0.02em; color: #0f0f0f; margin-bottom: 40px;">Meet the founder</h2>
-      <div style="background: #fff; border: 1px solid #e4e0e0; border-radius: 12px; min-height: 320px; display: flex; align-items: center; justify-content: center; padding: 48px;">
+      <div class="founder-card" style="background: #fff; border: 1px solid #e4e0e0; border-radius: 12px; min-height: 320px; display: flex; align-items: center; justify-content: center; padding: 48px;">
         <div style="text-align: left;">
-          <div style="width: 160px; height: 160px; border-radius: 50%; overflow: hidden; margin: 0 0 24px;">
+          <div class="founder-photo" style="width: 160px; height: 160px; border-radius: 50%; overflow: hidden; margin: 0 0 24px;">
             <img src="images/akhilesh-kumar-image-founder.jpeg" alt="Akhilesh Kumar — Founder, med.ContagiAd" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; object-position: center top; transform: scale(1.1) translateY(-4%); transform-origin: center top;" />
           </div>
           <h3 style="font-size: 1.1rem; font-weight: 800; color: #0f0f0f; margin-bottom: 4px;">Akhilesh Kumar</h3>
@@ -2008,6 +2010,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     #scroll-top.visible { opacity: 1; pointer-events: auto; }
     #scroll-top:hover { transform: translateY(-2px); }
     #scroll-top svg { width: 18px; height: 18px; fill: #fff; }
+    @media (max-width: 600px) {
+      .founder-card { padding: 28px 24px !important; }
+      .founder-photo { width: 120px !important; height: 120px !important; }
+    }
   </style>
 
   <script>
