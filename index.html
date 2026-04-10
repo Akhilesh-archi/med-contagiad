@@ -242,24 +242,58 @@
     .badge {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      background: var(--red-light);
+      gap: 5px;
+      background: linear-gradient(135deg, #fff1f0 0%, #ffe4e1 100%);
       color: var(--red-dark);
-      font-size: 0.72rem;
+      font-size: 0.34rem;
       font-weight: 700;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.07em;
       text-transform: uppercase;
-      padding: 6px 14px;
+      padding: 2px 6px 2px 4px;
       border-radius: 100px;
       width: fit-content;
+      border: 0.5px solid rgba(200, 55, 45, 0.2);
+      box-shadow:
+        0 0 0 1px rgba(200, 55, 45, 0.1),
+        0 0 8px rgba(200, 55, 45, 0.25),
+        0 0 20px rgba(200, 55, 45, 0.12);
+      position: relative;
+      z-index: 2;
+      animation: badge-pulse 2.8s ease-in-out infinite;
     }
-    .badge svg { width: 13px; height: 13px; fill: #c8372d; }
+    .badge::before {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      border-radius: 100px;
+      background: linear-gradient(135deg, rgba(200,55,45,0.3), rgba(200,55,45,0.05), rgba(200,55,45,0.2));
+      z-index: -1;
+      filter: blur(5px);
+    }
+    .badge-dot {
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: #c8372d;
+      box-shadow: 0 0 4px 1px rgba(200,55,45,0.7);
+      flex-shrink: 0;
+      animation: dot-blink 2.8s ease-in-out infinite;
+    }
+    @keyframes badge-pulse {
+      0%, 100% { box-shadow: 0 0 0 1px rgba(200,55,45,0.1), 0 0 8px rgba(200,55,45,0.25), 0 0 20px rgba(200,55,45,0.12); }
+      50%       { box-shadow: 0 0 0 2px rgba(200,55,45,0.18), 0 0 14px rgba(200,55,45,0.38), 0 0 32px rgba(200,55,45,0.18); }
+    }
+    @keyframes dot-blink {
+      0%, 100% { opacity: 1;   box-shadow: 0 0 4px 1px rgba(200,55,45,0.7); }
+      50%       { opacity: 0.6; box-shadow: 0 0 7px 2px rgba(200,55,45,0.9); }
+    }
+    .badge svg { width: 5px; height: 5px; flex-shrink: 0; }
 
     .review-bar {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      margin-top: 8px;
+      margin-top: -10px;
       margin-bottom: 14px;
       background: #fff;
       border: 1px solid var(--border);
@@ -267,6 +301,8 @@
       padding: 6px 14px 6px 6px;
       width: fit-content;
       box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      position: relative;
+      z-index: 1;
     }
     .review-avatars {
       display: flex;
@@ -372,7 +408,7 @@
       display: inline;
       font-weight: 800;
       color: var(--ink);
-      background-image: linear-gradient(104deg, transparent 1%, rgba(200,55,45,0.42) 3%, rgba(200,55,45,0.42) 97%, transparent 99%);
+      background-image: linear-gradient(104deg, transparent 1%, rgba(182,245,200,0.9) 3%, rgba(182,245,200,0.9) 97%, transparent 99%);
       background-repeat: no-repeat;
       background-position: 0 50%;
       background-size: 100% 85%;
@@ -383,7 +419,7 @@
       display: inline;
       background-image:
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 10' preserveAspectRatio='none'%3E%3Cpath d='M2,7 C18,2 40,10 62,6 C84,2 106,9 128,5 C150,1 172,8 194,5 C204,3 212,6 218,5' fill='none' stroke='%23c8372d' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"),
-        linear-gradient(104deg, transparent 1%, rgba(255,220,0,0.38) 3%, rgba(255,220,0,0.38) 97%, transparent 99%);
+        linear-gradient(104deg, transparent 1%, rgba(182,245,200,0.9) 3%, rgba(182,245,200,0.9) 97%, transparent 99%);
       background-repeat: no-repeat, no-repeat;
       background-position: 0 100%, 0 45%;
       background-size: 100% 10px, 100% 72%;
@@ -391,7 +427,7 @@
     }
     .hand-underline-only {
       display: inline;
-      background-image: linear-gradient(104deg, transparent 1%, rgba(200,55,45,0.42) 3%, rgba(200,55,45,0.42) 97%, transparent 99%);
+      background-image: linear-gradient(104deg, transparent 1%, rgba(182,245,200,0.9) 3%, rgba(182,245,200,0.9) 97%, transparent 99%);
       background-repeat: no-repeat;
       background-position: 0 50%;
       background-size: 100% 85%;
@@ -1156,6 +1192,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- LEFT -->
       <div class="hero-left">
 
+        <div class="badge">
+          <span class="badge-dot"></span>
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 7l-9 9-4-4-6 6" stroke="#c8372d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="16 7 22 7 22 13" stroke="#c8372d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          Rapidly Growing Marketing Agency for Doctors / Clinics
+        </div>
+
         <div class="review-bar">
           <div class="review-avatars">
             <span class="avatar" style="background:#ddd;padding:0;overflow:hidden;"><img src="https://randomuser.me/api/portraits/men/48.jpg" width="32" height="32" alt="Doctor" loading="lazy" decoding="async" style="display:block;width:100%;height:100%;object-fit:cover;"/></span>
@@ -1165,25 +1207,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
           <div class="review-info">
             <div class="review-stars">★★★★<span style="position:relative;display:inline-block;color:#e5e7eb;">★<span style="position:absolute;left:0;top:0;width:50%;overflow:hidden;color:#f59e0b;">★</span></span></div>
-            <p class="review-text"><strong>75+ doctors</strong> already growing with us</p>
+            <p class="review-text"><strong>Trusted by doctors</strong> across India</p>
           </div>
         </div>
 
         <h1>
           Become the <span class="accent">#1 Doctor</span><br/>
           in Your City Within 90 Days<br/>
-          Using Our 360° Branding System<br/>
+          Using Our <span class="hand-underline-only">360° Branding System</span><br/>
         </h1>
 
         <p class="hero-sub">Does your digital presence match your clinical expertise?</p>
 
         <p class="hero-body">
-          A few reviews aren't enough to lead your town. Our <span class="hand-underline-only">360° marketing and branding approach</span> ensures
-          your practice stays top-of-mind wherever your patients are, across every platform. <span class="hand-usp">We never work with your competition — one speciality per city.</span>
+          Reviews alone won't make you the top doctor in your city. Our 360° marketing and branding approach keeps your practice top-of-mind across every platform. <span class="hand-usp">We never work with your competition —</span> one speciality per city.
         </p>
 
         <p class="hero-body">
-          Claim the digital home your practice deserves — <strong style="font-weight:900;color:var(--ink);">get a <span class="hand-underline">custom website free</span> for one year.</strong>
+          <strong style="font-weight:900;color:var(--ink);">Get a <span class="hand-underline-only">custom website worth ₹14,999 free</span> for one year.</strong>
         </p>
 
         <div class="cta-group">
@@ -1345,11 +1386,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="t-card">
           <div class="t-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-          <p class="t-quote">"Patients in my own colony were going to a competitor with better Google reviews. Within 90 days — Search Ads, Instagram reels, Google Maps — I became the top-rated dermatologist in South Delhi. OPD went from 18 to 47 patients a day."</p>
+          <p class="t-quote">"I was losing patients to a younger dermatologist down the road simply because he had better visibility online. Within 90 days of joining, I was ranking #1 on Google Maps, my Instagram reels were getting thousands of views, and my OPD grew from 21 to 53 patients a day. The 360° system covers everything — I didn't have to think about a single platform myself."</p>
           <div class="t-author">
             <div class="t-avatar" style="background:linear-gradient(135deg,#c8372d,#e05a4e);">PS</div>
             <div>
-              <div class="t-name">Dr. Priya Sharma</div>
+              <div class="t-name">Dr. Priya S.</div>
               <div class="t-role">Dermatologist · New Delhi</div>
             </div>
           </div>
@@ -1357,11 +1398,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="t-card">
           <div class="t-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-          <p class="t-quote">"I never thought social media could fill my OT schedule — I was wrong. Akhilesh personally walked me through the strategy on day one and that attention never dropped. In 5 months, reviews jumped from 9 to 84 and I stopped depending on hospital referrals entirely."</p>
+          <p class="t-quote">"What sets Akhilesh apart is that he genuinely understands what doctors need — he's not selling you a generic package, he's building your reputation. He personally sat with me, mapped out the entire strategy, and was reachable every time I had a concern. Knowing he works with only one orthopaedic surgeon per city gave me complete confidence that my growth was his priority. I stopped depending on hospital referrals within 5 months."</p>
           <div class="t-author">
             <div class="t-avatar" style="background:linear-gradient(135deg,#1d4ed8,#3b82f6);">RM</div>
             <div>
-              <div class="t-name">Dr. Rahul Mehta</div>
+              <div class="t-name">Dr. Rahul M.</div>
               <div class="t-role">Orthopedic Surgeon · Mumbai</div>
             </div>
           </div>
@@ -1369,11 +1410,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="t-card">
           <div class="t-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-          <p class="t-quote">"They actually understand medical marketing — no generic content, no compliance headaches. Built my entire digital presence from scratch. Walk-ins doubled in 4 months and I now rank #1 for 'gynaecologist in Banjara Hills'."</p>
+          <p class="t-quote">"I signed up with no long-term contract and zero risk — and that alone told me they were confident in their results. They built my clinic website for free, set up my Google presence, and ran my social media from day one. Four months later I rank #1 for 'gynaecologist in Banjara Hills' and walk-ins have doubled. Best decision I made for my practice."</p>
           <div class="t-author">
             <div class="t-avatar" style="background:linear-gradient(135deg,#059669,#10b981);">AR</div>
             <div>
-              <div class="t-name">Dr. Anita Reddy</div>
+              <div class="t-name">Dr. Anita R.</div>
               <div class="t-role">Gynaecologist · Hyderabad</div>
             </div>
           </div>
