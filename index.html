@@ -170,6 +170,10 @@
       transform: translateY(-1px);
       box-shadow: 0 6px 20px rgba(200,55,45,0.5);
     }
+    .btn-outline:active {
+      transform: translateY(0) scale(0.97);
+      box-shadow: 0 3px 10px rgba(200,55,45,0.35);
+    }
 
     /* ─────────────────────────── HERO ─────────────────────────── */
     .hero-wrap {
@@ -346,6 +350,10 @@
       background: var(--red-dark);
       transform: translateY(-2px);
       box-shadow: 0 12px 36px rgba(200,55,45,0.45);
+    }
+    .btn-cta:active {
+      transform: translateY(0) scale(0.97);
+      box-shadow: 0 4px 14px rgba(200,55,45,0.35);
     }
     .btn-cta svg { width: 18px; height: 18px; fill: #fff; flex-shrink: 0; }
 
@@ -572,6 +580,16 @@
         white-space: nowrap;
         box-shadow: 0 3px 10px rgba(200,55,45,0.35);
         letter-spacing: 0.01em;
+        transition: background 0.18s, transform 0.15s, box-shadow 0.18s;
+      }
+      .btn-nav-cta:hover {
+        background: linear-gradient(135deg, #c8372d, #9b1d14);
+        transform: translateY(-1px);
+        box-shadow: 0 6px 18px rgba(200,55,45,0.5);
+      }
+      .btn-nav-cta:active {
+        transform: translateY(0) scale(0.97);
+        box-shadow: 0 2px 8px rgba(200,55,45,0.35);
       }
       .phone-bubble { width: 44px; height: 44px; }
       .phone-bubble svg { width: 22px; height: 22px; }
@@ -853,18 +871,51 @@
       letter-spacing: 0.04em;
       text-transform: uppercase;
       text-decoration: none;
-      padding: 16px 36px;
+      padding: 9px 36px;
       border-radius: 10px;
       box-shadow: 0 6px 24px rgba(0,0,0,0.25);
-      transition: transform 0.15s, box-shadow 0.15s;
+      cursor: pointer;
+      transition: transform 0.18s, box-shadow 0.18s, background 0.18s, color 0.18s;
     }
     .pas-cta-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 32px rgba(0,0,0,0.3);
+      background: #f0d5d2;
+      color: #7a1a12;
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 14px 40px rgba(0,0,0,0.35);
+    }
+    .pas-cta-btn:active {
+      transform: translateY(0) scale(0.97);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.2);
     }
     @media (max-width: 600px) {
       .pas { padding: 60px 20px; }
       .pas-cta-block { padding: 28px 20px; }
+    }
+
+    /* ── VALUE PROP SECTION CTAs ── */
+    .feat-cta-btn {
+      display: inline-block;
+      background: var(--red);
+      color: #fff;
+      font-family: inherit;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 11px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    }
+    .feat-cta-btn:hover {
+      background: var(--red-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 36px rgba(200,55,45,0.45);
+    }
+    .feat-cta-btn:active {
+      transform: translateY(0) scale(0.97);
+      box-shadow: 0 3px 10px rgba(200,55,45,0.3);
     }
 
     /* ─── MOBILE: NEW SECTIONS ─── */
@@ -993,14 +1044,39 @@
     }
 
     /* content-visibility: auto with `auto` intrinsic-size — browser remembers actual height after first paint, preventing CLS */
-    .testimonials,
-    .pas {
+    .testimonials {
       content-visibility: auto;
       contain-intrinsic-size: auto 700px;
     }
     .cv-auto {
       content-visibility: auto;
       contain-intrinsic-size: auto 600px;
+    }
+
+    /* ── FOUNDER CTA ── */
+    .founder-cta-btn {
+      display: inline-block;
+      background: #0f0f0f;
+      color: #fff;
+      font-family: inherit;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 11px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+      transition: background 0.18s, transform 0.15s, box-shadow 0.18s;
+    }
+    .founder-cta-btn:hover {
+      background: #2a2a2a;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.35);
+    }
+    .founder-cta-btn:active {
+      transform: translateY(0) scale(0.97);
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
     }
 
     /* ── SCROLL-TO-TOP BUTTON ── */
@@ -1019,11 +1095,12 @@
       cursor: pointer;
       opacity: 0;
       pointer-events: none;
-      transition: opacity 0.2s, transform 0.2s;
+      transition: opacity 0.2s, transform 0.2s, box-shadow 0.18s;
       z-index: 998;
     }
     #scroll-top.visible { opacity: 1; pointer-events: auto; }
-    #scroll-top:hover { transform: translateY(-2px); }
+    #scroll-top:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(200,55,45,0.55); }
+    #scroll-top:active { transform: translateY(0) scale(0.93); box-shadow: 0 3px 8px rgba(200,55,45,0.35); }
     #scroll-top svg { width: 18px; height: 18px; fill: #fff; }
   </style>
 </head>
@@ -1354,7 +1431,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="pas-cta-block">
         <p>Book your free 30-minute expert consultation with one of our team members and discover how we can make you the go-to specialist in your area.</p>
         <span class="offer-tag">Limited Offer — <span style="background:#b6f5c8; color:#0f0f0f; padding:1px 5px; border-radius:3px; font-weight:700;">Free Website worth ₹14,999</span> · Only 3 slots available this month</span><br>
-        <a href="consultation.html" class="pas-cta-btn">Book Free Consultation →</a>
+        <a href="consultation.html" class="pas-cta-btn">Book Free Consultation →<span style="display:block;font-size:0.7rem;font-weight:400;letter-spacing:0.01em;text-transform:none;opacity:0.75;line-height:1;">Claim your free website</span></a>
+
       </div>
 
     </div>
@@ -1368,13 +1446,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="feat-row" style="display: flex; align-items: center; gap: 64px; flex-wrap: wrap;">
         <!-- Infographic 1: Google Local Pack -->
         <div style="flex:1.4;min-width:340px;border-radius:12px;overflow:hidden;border:1px solid #e4e0e0;box-shadow:0 4px 20px rgba(0,0,0,0.07);">
-          <img src="images/gmb-value-prop-mockup.png" alt="Google My Business Local SEO ranking mockup" loading="lazy" decoding="async" style="width:100%;height:auto;display:block;" />
+          <img src="images/value-prop-google-business-profiles-doctors-clinic.png" alt="Google My Business Local SEO ranking mockup" loading="lazy" decoding="async" style="width:100%;height:auto;display:block;filter:drop-shadow(0 8px 24px rgba(0,0,0,0.11));" />
         </div>
         <div style="flex: 1; min-width: 280px;">
           <p style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); margin-bottom: 10px;">Local SEO</p>
           <h2 style="font-size: clamp(1.1rem, 2vw, 1.35rem); font-weight: 900; line-height: 1.2; letter-spacing: -0.01em; color: #0f0f0f; margin-bottom: 12px;">Be the first choice<br>in your city.</h2>
           <p style="font-size: 0.85rem; color: #6b6b6b; line-height: 1.7; margin-bottom: 20px;">We optimise your website for Local SEO and Google Business Profile so you show up exactly when local patients search for care.</p>
-          <a href="consultation.html" style="display: inline-block; background: var(--red); color: #fff; font-family: inherit; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 11px 22px; border-radius: 8px; text-decoration: none; transition: background 0.18s;">Book Free Consultation</a>
+          <a href="consultation.html" class="feat-cta-btn">Book Free Consultation</a>
         </div>
       </div>
 
@@ -1384,11 +1462,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); margin-bottom: 10px;">Google Ads</p>
           <h2 style="font-size: clamp(1.1rem, 2vw, 1.35rem); font-weight: 900; line-height: 1.2; letter-spacing: -0.01em; color: #0f0f0f; margin-bottom: 12px;">Reach your patients when<br>they need you the most.</h2>
           <p style="font-size: 0.85rem; color: #6b6b6b; line-height: 1.7; margin-bottom: 20px;">Hyper-targeted PPC (Pay-Per-Click) campaigns triggered by specific medical search queries.</p>
-          <a href="consultation.html" style="display: inline-block; background: var(--red); color: #fff; font-family: inherit; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 11px 22px; border-radius: 8px; text-decoration: none; transition: background 0.18s;">Book Free Consultation</a>
+          <a href="consultation.html" class="feat-cta-btn">Book Free Consultation</a>
         </div>
         <!-- Infographic 2: PPC Funnel -->
         <div style="flex:1.4;min-width:340px;border-radius:12px;overflow:hidden;border:1px solid #e4e0e0;box-shadow:0 4px 20px rgba(0,0,0,0.07);order:2;">
-          <img src="images/search-ads-value-prop-mockup.png" alt="Google Search Ads mockup" loading="lazy" decoding="async" style="width:100%;height:auto;display:block;" />
+          <img src="images/value-prop-search-ads-doctors-clinic.png" alt="Google Search Ads mockup" loading="lazy" decoding="async" style="width:100%;height:auto;display:block;" />
         </div>
       </div>
 
@@ -1445,7 +1523,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); margin-bottom: 10px;">Social Media</p>
           <h2 style="font-size: clamp(1.1rem, 2vw, 1.35rem); font-weight: 900; line-height: 1.2; letter-spacing: -0.01em; color: #0f0f0f; margin-bottom: 12px;">Scale From Zero—Fast</h2>
           <p style="font-size: 0.85rem; color: #6b6b6b; line-height: 1.7; margin-bottom: 20px;">Whether you're starting fresh or a social media veteran, our Meta and YouTube ad strategies build your patient base and brand authority at speed.</p>
-          <a href="consultation.html" style="display: inline-block; background: var(--red); color: #fff; font-family: inherit; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 11px 22px; border-radius: 8px; text-decoration: none; transition: background 0.18s;">Book Free Consultation</a>
+          <a href="consultation.html" class="feat-cta-btn">Book Free Consultation</a>
         </div>
       </div>
 
@@ -1454,13 +1532,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="feat-row" style="display: flex; align-items: center; gap: 64px; flex-wrap: wrap;">
         <!-- Infographic 4: AI Receptionist -->
         <div style="flex:1;min-width:280px;border-radius:12px;overflow:hidden;border:1px solid #e4e0e0;box-shadow:0 4px 20px rgba(0,0,0,0.07);order:2;">
-          <img src="images/ai-receptionist-value-prop-mockup.png" alt="AI Receptionist performance dashboard mockup" loading="lazy" decoding="async" style="width:100%;height:auto;display:block;" />
+          <img src="images/value-prop-A.I-receptionist-doctors-clinic.png" alt="AI Receptionist performance dashboard mockup" loading="lazy" decoding="async" style="width:100%;height:auto;display:block;" />
         </div>
         <div style="flex: 1; min-width: 280px; order: 1;">
           <p style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); margin-bottom: 10px;">AI Receptionist</p>
           <h2 style="font-size: clamp(1.1rem, 2vw, 1.35rem); font-weight: 900; line-height: 1.2; letter-spacing: -0.01em; color: #0f0f0f; margin-bottom: 12px;">A receptionist that never sleeps — speaks Hindi & English.</h2>
           <p style="font-size: 0.85rem; color: #6b6b6b; line-height: 1.7; margin-bottom: 20px;">Your human receptionist may miss a call while scrolling through reels, but your AI receptionist never will. Every enquiry is captured, logged, and followed up — 24 hours a day, 7 days a week.</p>
-          <a href="consultation.html" style="display: inline-block; background: var(--red); color: #fff; font-family: inherit; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 11px 22px; border-radius: 8px; text-decoration: none; transition: background 0.18s;">Book Free Consultation</a>
+          <a href="consultation.html" class="feat-cta-btn">Book Free Consultation</a>
         </div>
       </div>
 
@@ -1470,11 +1548,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); margin-bottom: 10px;">Content Marketing</p>
           <h2 style="font-size: clamp(1.1rem, 2vw, 1.35rem); font-weight: 900; line-height: 1.2; letter-spacing: -0.01em; color: #0f0f0f; margin-bottom: 12px;">An article that builds your reputation and TOFU.</h2>
           <p style="font-size: 0.85rem; color: #6b6b6b; line-height: 1.7; margin-bottom: 20px;">We write articles that Google ranks, so your audience gets educated and keeps coming back — building trust over time and establishing your authority as the go-to specialist in your field.</p>
-          <a href="consultation.html" style="display: inline-block; background: var(--red); color: #fff; font-family: inherit; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 11px 22px; border-radius: 8px; text-decoration: none; transition: background 0.18s;">Book Free Consultation</a>
+          <a href="consultation.html" class="feat-cta-btn">Book Free Consultation</a>
         </div>
         <!-- Infographic 5: SEO Article Card -->
         <div style="flex:1;min-width:280px;border-radius:12px;overflow:hidden;border:1px solid #e4e0e0;box-shadow:0 4px 20px rgba(0,0,0,0.07);order:1;">
-          <img src="images/article-value-prop-mockup.png" alt="Content marketing article mockup" loading="lazy" decoding="async" style="width:100%;height:auto;display:block;" />
+          <img src="images/value-prop-done-for-you-medical-article-doctors-clinic.png" alt="Content marketing article mockup" loading="lazy" decoding="async" style="width:100%;height:auto;display:block;" />
         </div>
       </div>
 
@@ -1482,13 +1560,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="feat-row" style="display: flex; align-items: center; gap: 64px; flex-wrap: wrap;">
         <!-- Infographic 6: PageSpeed / Mobile Website -->
         <div style="flex:1;min-width:280px;border-radius:12px;overflow:hidden;border:1px solid #e4e0e0;box-shadow:0 4px 20px rgba(0,0,0,0.07);order:2;">
-          <img src="images/page-speed-insight-mockup.png" alt="PageSpeed Insights mobile performance mockup" loading="lazy" decoding="async" style="width:100%;height:auto;display:block;" />
+          <img src="images/value-prop-pagespeed-test-doctors-clinic.png" alt="PageSpeed Insights mobile performance mockup" loading="lazy" decoding="async" style="width:100%;height:auto;display:block;" />
         </div>
         <div style="flex: 1; min-width: 280px; order: 1;">
           <p style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); margin-bottom: 10px;">Website</p>
           <h2 style="font-size: clamp(1.1rem, 2vw, 1.35rem); font-weight: 900; line-height: 1.2; letter-spacing: -0.01em; color: #0f0f0f; margin-bottom: 12px;">Don't lose a patient to a loading screen. Mobile-optimised. Lightning fast.</h2>
           <p style="font-size: 0.85rem; color: #6b6b6b; line-height: 1.7; margin-bottom: 20px;">A lightning-fast, mobile-optimised website — because your patients don't have patience and are probably scrolling on their phones.</p>
-          <a href="consultation.html" style="display: inline-block; background: var(--red); color: #fff; font-family: inherit; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 11px 22px; border-radius: 8px; text-decoration: none; transition: background 0.18s;">Get your website</a>
+          <a href="consultation.html" class="feat-cta-btn">Get your website</a>
         </div>
       </div>
 
@@ -1514,7 +1592,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
       <div style="text-align: center;">
-        <a href="consultation.html" style="display: inline-block; background: var(--red); color: #fff; font-family: inherit; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 13px 28px; border-radius: 8px; text-decoration: none; transition: background 0.18s;">Get your free website →</a>
+        <a href="consultation.html" class="feat-cta-btn">Get your free website →</a>
         <p style="font-size: 0.75rem; color: #6b6b6b; margin-top: 10px;">Aesthetically designed — free for 1 year</p>
       </div>
     </div>
@@ -1582,7 +1660,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       </div>
       <div style="text-align: center;">
-        <a href="consultation.html" style="display: inline-block; background: var(--red); color: #fff; font-family: inherit; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 13px 28px; border-radius: 8px; text-decoration: none; transition: background 0.18s;">Book Free Consultation</a>
+        <a href="consultation.html" class="feat-cta-btn">Book Free Consultation</a>
       </div>
     </div>
   </section>
@@ -1612,7 +1690,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
       <div style="text-align: center;">
-        <a href="consultation.html" style="display: inline-block; background: var(--red); color: #fff; font-family: inherit; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 13px 28px; border-radius: 8px; text-decoration: none; transition: background 0.18s;">Book Free Consultation</a>
+        <a href="consultation.html" class="feat-cta-btn">Book Free Consultation</a>
       </div>
     </div>
   </section>
@@ -1630,7 +1708,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #c8372d; margin-bottom: 16px;">Founder | Digital Marketing Strategist</p>
           <p style="font-size: 0.85rem; color: #6b6b6b; line-height: 1.8; max-width: 560px; margin: 0 0 16px;">Hi, Doctors! I'm a digital marketing strategist who has spent years building growth systems for D2C brands across India — I also hold a degree in Marketing. The idea for med.ContagiAd was born from a single conversation — a close friend, a doctor who graduated from one of the top medical schools in India, was struggling to get patients despite being exceptionally talented. Every agency he found was either clueless about healthcare or priced for hospitals, not someone just starting out.</p>
           <p style="font-size: 0.85rem; color: #6b6b6b; line-height: 1.8; max-width: 560px; margin: 0 0 20px;">I spoke to more doctors and the same story kept coming up. What made it urgent was something bigger: doctors were completely missing the AI wave reshaping every other industry. So I built med.ContagiAd — a <strong style="color:#0f0f0f;">360° medical marketing & branding system</strong>, built exclusively for doctors, affordable from day one, and designed to deliver results a large hospital would be proud of. When you work with us, I am your first point of contact — not a junior account manager like most agencies do.</p>
-          <a href="https://calendly.com/akhileshkum_/30min" target="_blank" rel="noopener" style="display: inline-block; background: #0f0f0f; color: #fff; font-family: inherit; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 11px 24px; border-radius: 8px; text-decoration: none;">Book a direct call with me →</a>
+          <a href="https://calendly.com/akhileshkum_/30min" target="_blank" rel="noopener" class="founder-cta-btn">Book a direct call with me →</a>
         </div>
       </div>
     </div>
@@ -1851,7 +1929,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             Free website worth ₹14,999 included for new clients this month
           </li>
         </ul>
-        <a href="consultation.html" style="display: inline-block; background: var(--red); color: #fff; font-family: inherit; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 13px 28px; border-radius: 8px; text-decoration: none; transition: background 0.18s; margin-bottom: 16px;">Book Free Consultation</a>
+        <a href="consultation.html" class="feat-cta-btn" style="margin-bottom: 16px;">Book Free Consultation</a>
         <div style="display: flex; flex-wrap: wrap; gap: 8px 20px;">
           <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.82rem; color: #374151; font-weight: 500;">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="#c8372d"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
