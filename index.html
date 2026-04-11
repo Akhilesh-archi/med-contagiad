@@ -215,7 +215,11 @@
         0 0 0 1px rgba(200, 55, 45, 0.1),
         0 0 8px rgba(200, 55, 45, 0.25),
         0 0 20px rgba(200, 55, 45, 0.12);
-      position: relative;
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      white-space: nowrap;
       z-index: 2;
       animation: badge-pulse 2.8s ease-in-out infinite;
     }
@@ -251,8 +255,8 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      margin-top: -10px;
-      margin-bottom: 14px;
+      margin-top: 0;
+      margin-bottom: 0;
       background: #fff;
       border: 1px solid var(--border);
       border-radius: 100px;
@@ -585,7 +589,7 @@
       .hero-sub { font-size: 0.95rem; line-height: 1.5; text-align: left; }
       .hero-body { font-size: 0.87rem; max-width: 100%; line-height: 1.55; text-align: left; }
 
-      .badge { margin-bottom: -9px; z-index: 3; }
+      .badge { z-index: 3; }
       .review-bar {
         padding: 5px 12px 5px 6px;
         gap: 7px;
@@ -1061,22 +1065,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- LEFT -->
       <div class="hero-left">
 
-        <div class="badge">
-          <span class="badge-dot"></span>
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 7l-9 9-4-4-6 6" stroke="#c8372d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="16 7 22 7 22 13" stroke="#c8372d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
-          Rapidly Growing Marketing Agency for Doctors / Clinics
-        </div>
-
-        <div class="review-bar">
-          <div class="review-avatars">
-            <span class="avatar" style="background:#ddd;padding:0;overflow:hidden;"><img src="https://randomuser.me/api/portraits/men/48.jpg" width="32" height="32" alt="Doctor" loading="lazy" decoding="async" style="display:block;width:100%;height:100%;object-fit:cover;"/></span>
-            <span class="avatar" style="background:linear-gradient(135deg,#4338ca,#6366f1);font-size:0.62rem;font-weight:800;color:#fff;">PR</span>
-            <span class="avatar" style="background:#ddd;padding:0;overflow:hidden;"><img src="https://randomuser.me/api/portraits/women/8.jpg" width="32" height="32" alt="Doctor" loading="lazy" decoding="async" style="display:block;width:100%;height:100%;object-fit:cover;"/></span>
-            <span class="avatar" style="background:#ddd;padding:0;overflow:hidden;"><img src="https://randomuser.me/api/portraits/women/19.jpg" width="32" height="32" alt="Doctor" loading="lazy" decoding="async" style="display:block;width:100%;height:100%;object-fit:cover;"/></span>
+        <div style="position:relative;width:fit-content;padding-top:10px;margin-bottom:14px;">
+          <div class="badge">
+            <span class="badge-dot"></span>
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 7l-9 9-4-4-6 6" stroke="#c8372d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><polyline points="16 7 22 7 22 13" stroke="#c8372d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+            Rapidly Growing Marketing Agency for Doctors / Clinics
           </div>
-          <div class="review-info">
-            <div class="review-stars">★★★★<span style="position:relative;display:inline-block;color:#e5e7eb;">★<span style="position:absolute;left:0;top:0;width:50%;overflow:hidden;color:#f59e0b;">★</span></span></div>
-            <p class="review-text"><strong>Trusted by doctors</strong> across India</p>
+
+          <div class="review-bar">
+            <div class="review-avatars">
+              <span class="avatar" style="background:#ddd;padding:0;overflow:hidden;"><img src="https://randomuser.me/api/portraits/men/48.jpg" width="32" height="32" alt="Doctor" loading="lazy" decoding="async" style="display:block;width:100%;height:100%;object-fit:cover;"/></span>
+              <span class="avatar" style="background:linear-gradient(135deg,#4338ca,#6366f1);font-size:0.62rem;font-weight:800;color:#fff;">PR</span>
+              <span class="avatar" style="background:#ddd;padding:0;overflow:hidden;"><img src="https://randomuser.me/api/portraits/women/8.jpg" width="32" height="32" alt="Doctor" loading="lazy" decoding="async" style="display:block;width:100%;height:100%;object-fit:cover;"/></span>
+              <span class="avatar" style="background:#ddd;padding:0;overflow:hidden;"><img src="https://randomuser.me/api/portraits/women/19.jpg" width="32" height="32" alt="Doctor" loading="lazy" decoding="async" style="display:block;width:100%;height:100%;object-fit:cover;"/></span>
+            </div>
+            <div class="review-info">
+              <div class="review-stars">★★★★<span style="position:relative;display:inline-block;color:#e5e7eb;">★<span style="position:absolute;left:0;top:0;width:50%;overflow:hidden;color:#f59e0b;">★</span></span></div>
+              <p class="review-text"><strong>Trusted by doctors</strong> across India</p>
+            </div>
           </div>
         </div>
 
@@ -1317,8 +1323,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <!-- AGITATE -->
-      <div class="pas-block">
-        <span class="pas-label">Why It Gets Worse</span>
+      <div class="pas-block" style="margin-top: 2rem;">
+
         <p>Most doctors and practitioners feel exactly this way. You studied medicine, not marketing or branding. In reality, managing these activities is a full-time job.</p>
         <p>Even the most skilled doctors face declining clinic visits due to the rapid increase in digital marketing spend by competitors and a shift in patient behaviour. Today, patients search for a clinic online before asking friends or family. If you aren't discoverable online, they won't even consider you.</p>
         <p>Simply having a few 5-star reviews on your Google Business Profile is no longer enough. A patient goes through multiple touchpoints before finally visiting your clinic. If your messaging and branding are inconsistent across these touchpoints, you lose trust — and your patients.</p>
@@ -1331,7 +1337,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <!-- SOLUTION -->
-      <div class="pas-block">
+      <div class="pas-block" style="margin-top: 2rem;">
         <span class="pas-label">Solution</span>
         <p>The good news is that building a clinic brand isn't about luck — it's the result of well-thought-out marketing and branding. Clinical expertise alone is no longer enough to bring patients to your door.</p>
         <p>We offer an all-inclusive 360° marketing and branding system designed to grow your patient base and establish you as the #1 doctor in your town. We identify every touchpoint a patient encounters and ensure your brand is present and persuasive at every step.</p>
