@@ -926,17 +926,9 @@
         grid-template-columns: 1fr !important;
       }
 
-      /* On mobile, swap horizontal line for vertical connectors between stacked cards */
+      /* Hide step connector line when cards stack vertically */
       .steps-grid::before {
         display: none;
-      }
-      .steps-grid > div:not(:last-child)::after {
-        content: '';
-        display: block;
-        width: 2px;
-        height: 32px;
-        background: linear-gradient(to bottom, #d9d4d0, transparent);
-        margin: 16px auto 0;
       }
 
       /* Testimonials grid */
@@ -1116,23 +1108,12 @@
     #scroll-top:active { transform: translateY(0) scale(0.93); box-shadow: 0 3px 8px rgba(200,55,45,0.35); }
     #scroll-top svg { width: 18px; height: 18px; fill: #fff; }
 
-    /* How it works — connector line between step cards */
+    /* How it works — step cards */
     .steps-grid {
       position: relative;
     }
-    .steps-grid::before {
-      content: '';
-      position: absolute;
-      top: 44px;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: linear-gradient(to right, transparent 0%, #d9d4d0 10%, #d9d4d0 90%, transparent 100%);
-      z-index: 0;
-    }
     .steps-grid > div {
       position: relative;
-      z-index: 1;
     }
   </style>
 </head>
