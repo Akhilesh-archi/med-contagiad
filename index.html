@@ -926,9 +926,17 @@
         grid-template-columns: 1fr !important;
       }
 
-      /* Hide step connector line when cards stack vertically */
+      /* On mobile, swap horizontal line for vertical connectors between stacked cards */
       .steps-grid::before {
         display: none;
+      }
+      .steps-grid > div:not(:last-child)::after {
+        content: '';
+        display: block;
+        width: 2px;
+        height: 32px;
+        background: linear-gradient(to bottom, #d9d4d0, transparent);
+        margin: 16px auto 0;
       }
 
       /* Testimonials grid */
