@@ -171,9 +171,19 @@
     .book-mockup {
       position: relative;
       width: 270px;
-      height: 360px;
       margin-top: 28px;
       margin-bottom: 32px;
+      overflow: hidden;
+      border-radius: 6px;
+      box-shadow:
+        0 28px 56px rgba(0,0,0,0.32),
+        0 8px 20px rgba(0,0,0,0.18);
+    }
+    .book-cover-img {
+      display: block;
+      width: calc(100% + 60px);
+      height: auto;
+      margin: -20px -30px;
     }
     .book-cover {
       width: 100%;
@@ -253,11 +263,7 @@
 
     /* ── FORM CARD ── */
     .form-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 28px 28px;
-      box-shadow: 0 8px 40px rgba(0,0,0,0.07);
+      padding: 0;
     }
 
     .form-header {
@@ -437,7 +443,7 @@
       .book-mockup {
         display: block;
         width: 160px;
-        height: 220px;
+        height: auto;
         margin: 14px 0 18px;
       }
       h1 {
@@ -495,8 +501,14 @@
         <div class="eyebrow"><span class="eyebrow-dot"></span> Free Download</div>
         <h1>The exact playbook doctors use to <em>dominate their city.</em></h1>
 
-        <!-- Placeholder container -->
-        <div class="book-mockup" style="background:var(--border);border-radius:10px;"></div>
+        <!-- Ebook cover image -->
+        <div class="book-mockup">
+          <img
+            src="images/Google_business_profile_optimization_for_doctors.png"
+            alt="Free Ebook: Google Business Profile Optimization for Doctors"
+            class="book-cover-img"
+          />
+        </div>
 
         <p class="subhead">In 90 days, you can go from invisible online to the most-searched doctor in your area. This free ebook shows you exactly how.</p>
 
