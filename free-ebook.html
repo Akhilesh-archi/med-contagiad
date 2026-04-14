@@ -439,16 +439,15 @@
       .book-mockup {
         display: block;
         width: 100%;
-        max-width: 460px;
-        min-height: 50vh;
-        height: auto;
+        max-width: 520px;
         margin: 10px auto 14px;
       }
       .book-mockup .book-cover-img {
-        width: 100%;
-        height: 100%;
-        min-height: 50vh;
-        object-fit: contain;
+        width: auto;
+        height: 55vh;
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
       }
       h1 {
         font-size: clamp(1.5rem, 5.5vw, 1.9rem);
@@ -487,8 +486,10 @@
       .bullet-list { gap: 10px; }
       .book-mockup {
         width: 100%;
-        max-width: 400px;
-        min-height: 50vh;
+        max-width: 480px;
+      }
+      .book-mockup .book-cover-img {
+        height: 52vh;
       }
     }
   </style>
