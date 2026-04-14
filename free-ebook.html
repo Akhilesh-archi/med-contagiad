@@ -440,8 +440,15 @@
         display: block;
         width: 100%;
         max-width: 460px;
+        min-height: 50vh;
         height: auto;
         margin: 10px auto 14px;
+      }
+      .book-mockup .book-cover-img {
+        width: 100%;
+        height: 100%;
+        min-height: 50vh;
+        object-fit: contain;
       }
       h1 {
         font-size: clamp(1.5rem, 5.5vw, 1.9rem);
@@ -481,6 +488,7 @@
       .book-mockup {
         width: 100%;
         max-width: 400px;
+        min-height: 50vh;
       }
     }
   </style>
