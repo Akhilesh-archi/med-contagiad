@@ -438,16 +438,16 @@
       }
       .book-mockup {
         display: block;
-        width: 100%;
-        max-width: 520px;
-        margin: 10px auto 14px;
+        width: calc(100% + 40px);
+        margin-left: -20px;
+        margin-right: -20px;
+        margin-top: 10px;
+        margin-bottom: 14px;
       }
       .book-mockup .book-cover-img {
-        width: auto;
-        height: 55vh;
-        max-width: 100%;
+        width: 100%;
+        height: auto;
         display: block;
-        margin: 0 auto;
       }
       h1 {
         font-size: clamp(1.5rem, 5.5vw, 1.9rem);
@@ -485,11 +485,13 @@
       .btn-submit { font-size: 0.88rem; height: 50px; }
       .bullet-list { gap: 10px; }
       .book-mockup {
-        width: 100%;
-        max-width: 480px;
+        width: calc(100% + 32px);
+        margin-left: -16px;
+        margin-right: -16px;
       }
       .book-mockup .book-cover-img {
-        height: 52vh;
+        width: 100%;
+        height: auto;
       }
     }
   </style>
