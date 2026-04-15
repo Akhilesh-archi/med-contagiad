@@ -1115,6 +1115,11 @@
     .steps-grid > div {
       position: relative;
     }
+
+    /* FAQ chevron rotation when open */
+    details[open] summary svg {
+      transform: rotate(180deg);
+    }
   </style>
 </head>
 <body>
@@ -1485,7 +1490,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- Row 3: Image left, text right -->
       <div class="feat-row" style="display: flex; align-items: center; gap: 64px; flex-wrap: wrap;">
         <!-- Infographic 3: Platform Performance Dashboard -->
-        <div style="flex:1.4;min-width:340px;border-radius:12px;overflow:hidden;border:1px solid #e4e0e0;box-shadow:0 4px 20px rgba(0,0,0,0.07);background:#fff;font-family:'Inter',sans-serif;line-height:normal;padding:20px;box-sizing:border-box;overflow-y:auto;">
+        <div style="flex:1.4;min-width:340px;border-radius:12px;overflow:hidden;border:1px solid #e4e0e0;box-shadow:0 4px 20px rgba(0,0,0,0.07);background:#fff;font-family:'Inter',sans-serif;line-height:normal;padding:20px;box-sizing:border-box;">
           <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#5f6368;margin-bottom:4px;">90-Day Results</div>
           <div style="font-size:0.82rem;font-weight:800;color:#0f0f0f;margin-bottom:16px;">Multi-Platform Performance</div>
           <!-- Instagram card -->
@@ -1532,7 +1537,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
         <div style="flex: 1; min-width: 280px;">
-          <p style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); margin-bottom: 10px;">Social Media</p>
+          <p style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); margin-bottom: 10px;">Social Media Management</p>
           <h2 style="font-size: clamp(1.1rem, 2vw, 1.35rem); font-weight: 900; line-height: 1.2; letter-spacing: -0.01em; color: #0f0f0f; margin-bottom: 12px;">Scale From <span style="background-color:#b9f5c8;">Zero—Fast</span></h2>
           <p style="font-size: 0.85rem; color: #6b6b6b; line-height: 1.7; margin-bottom: 20px;">Whether you're starting fresh or a social media veteran, our Meta and YouTube ad strategies build your patient base and brand authority at speed.</p>
           <a href="consultation.html" class="feat-cta-btn">Grow My Social Media</a>
@@ -1582,6 +1587,136 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
 
+      <!-- Row 7: Image left, text right -->
+      <div class="feat-row" style="display: flex; align-items: center; gap: 64px; flex-wrap: wrap;">
+        <!-- Infographic 7: Intelligence Loop -->
+        <div style="flex:1.4;min-width:340px;border-radius:12px;border:1px solid #e4e0e0;box-shadow:0 4px 20px rgba(0,0,0,0.07);order:1;background:#fff;font-family:'Inter',sans-serif;line-height:normal;padding:24px;box-sizing:border-box;">
+          <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#5f6368;margin-bottom:4px;">Continuous Improvement</div>
+          <div style="font-size:0.82rem;font-weight:800;color:#0f0f0f;margin-bottom:18px;">The Intelligence Loop</div>
+          <!-- 4-step loop grid -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;">
+            <!-- Track -->
+            <div style="background:#f0f7ff;border-radius:10px;padding:12px;">
+              <div style="width:28px;height:28px;border-radius:8px;background:#2563eb;display:grid;place-items:center;margin-bottom:8px;">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </div>
+              <div style="font-size:0.68rem;font-weight:800;color:#0f0f0f;">01 · Track</div>
+              <div style="font-size:0.58rem;color:#6b6b6b;margin-top:3px;line-height:1.4;">Every click, call &amp; conversion</div>
+            </div>
+            <!-- Analyze -->
+            <div style="background:#fff7ed;border-radius:10px;padding:12px;">
+              <div style="width:28px;height:28px;border-radius:8px;background:#ea580c;display:grid;place-items:center;margin-bottom:8px;">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              </div>
+              <div style="font-size:0.68rem;font-weight:800;color:#0f0f0f;">02 · Analyze</div>
+              <div style="font-size:0.58rem;color:#6b6b6b;margin-top:3px;line-height:1.4;">Identify what's working</div>
+            </div>
+            <!-- Optimize -->
+            <div style="background:#f0fdf4;border-radius:10px;padding:12px;">
+              <div style="width:28px;height:28px;border-radius:8px;background:#16a34a;display:grid;place-items:center;margin-bottom:8px;">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+              </div>
+              <div style="font-size:0.68rem;font-weight:800;color:#0f0f0f;">03 · Optimize</div>
+              <div style="font-size:0.58rem;color:#6b6b6b;margin-top:3px;line-height:1.4;">Refine spend &amp; creative</div>
+            </div>
+            <!-- Repeat -->
+            <div style="background:#fdf4ff;border-radius:10px;padding:12px;">
+              <div style="width:28px;height:28px;border-radius:8px;background:#9333ea;display:grid;place-items:center;margin-bottom:8px;">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.1"/></svg>
+              </div>
+              <div style="font-size:0.68rem;font-weight:800;color:#0f0f0f;">04 · Repeat</div>
+              <div style="font-size:0.58rem;color:#6b6b6b;margin-top:3px;line-height:1.4;">Compounds month on month</div>
+            </div>
+          </div>
+          <!-- Result summary bar -->
+          <div style="background:#f9f8f7;border-radius:10px;padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:12px;">
+            <div>
+              <div style="font-size:0.58rem;color:#6b6b6b;">Avg. after 90 days</div>
+              <div style="font-size:0.72rem;font-weight:800;color:#0f0f0f;margin-top:2px;">Cost-per-lead <span style="color:#16a34a;">↓ 43%</span></div>
+            </div>
+            <div style="text-align:right;">
+              <div style="font-size:0.58rem;color:#6b6b6b;">Patient volume</div>
+              <div style="font-size:0.72rem;font-weight:800;color:#0f0f0f;margin-top:2px;"><span style="color:#2563eb;">↑ 2.4×</span> growth</div>
+            </div>
+          </div>
+        </div>
+        <div style="flex: 1; min-width: 280px; order: 2;">
+          <p style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); margin-bottom: 10px;">Intelligence Loop</p>
+          <h2 style="font-size: clamp(1.1rem, 2vw, 1.35rem); font-weight: 900; line-height: 1.2; letter-spacing: -0.01em; color: #0f0f0f; margin-bottom: 12px;">Data drives <span style="background-color:#b9f5c8;">smarter decisions</span> every single day.</h2>
+          <p style="font-size: 0.85rem; color: #6b6b6b; line-height: 1.7; margin-bottom: 20px;">Our intelligence loop—track, analyze, optimize, repeat—creates a compounding effect where your marketing gets smarter every day. By using yesterday's data to refine tomorrow's strategy, we ensure your results don't just grow; they accelerate.</p>
+          <a href="consultation.html" class="feat-cta-btn">Start My Intelligence Loop</a>
+        </div>
+      </div>
+
+      <!-- Row 8: Text left, image right -->
+      <div class="feat-row" style="display: flex; align-items: center; gap: 64px; flex-wrap: wrap;">
+        <div style="flex: 1; min-width: 280px; order: 1;">
+          <p style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); margin-bottom: 10px;">Paid Social</p>
+          <h2 style="font-size: clamp(1.1rem, 2vw, 1.35rem); font-weight: 900; line-height: 1.2; letter-spacing: -0.01em; color: #0f0f0f; margin-bottom: 12px;">Smart paid social retargeting <span style="background-color:#b9f5c8;">brings warm leads back.</span></h2>
+          <p style="font-size: 0.85rem; color: #6b6b6b; line-height: 1.7; margin-bottom: 20px;">Prospects visit, then vanish. Our retargeting keeps you visible on FB, Insta, and YT until they're ready to book. We optimize every ad to ensure interested visitors return to schedule.</p>
+          <a href="consultation.html" class="feat-cta-btn">Recapture Your Traffic</a>
+        </div>
+        <!-- Infographic 8: Paid Social Retargeting -->
+        <div style="flex:1.4;min-width:340px;border-radius:12px;border:1px solid #e4e0e0;box-shadow:0 4px 20px rgba(0,0,0,0.07);order:2;background:#fff;font-family:'Inter',sans-serif;line-height:normal;padding:24px;box-sizing:border-box;">
+          <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#5f6368;margin-bottom:4px;">Retargeting Campaign</div>
+          <div style="font-size:0.82rem;font-weight:800;color:#0f0f0f;margin-bottom:16px;">Warm Lead Recovery</div>
+          <!-- Step 1 -->
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#f3f4f6;display:grid;place-items:center;flex-shrink:0;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#374151" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <div style="flex:1;">
+              <div style="font-size:0.65rem;font-weight:700;color:#0f0f0f;">1,840 website visitors</div>
+              <div style="background:#e5e7eb;border-radius:100px;height:4px;margin-top:4px;overflow:hidden;"><div style="width:100%;height:100%;background:#374151;border-radius:100px;"></div></div>
+            </div>
+            <div style="font-size:0.62rem;color:#6b6b6b;flex-shrink:0;">100%</div>
+          </div>
+          <!-- Arrow -->
+          <div style="text-align:center;margin:3px 0 3px 42px;font-size:0.65rem;color:#9ca3af;">↓ left without booking</div>
+          <!-- Step 2 -->
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#eff6ff;display:grid;place-items:center;flex-shrink:0;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1877f2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+            </div>
+            <div style="flex:1;">
+              <div style="font-size:0.65rem;font-weight:700;color:#0f0f0f;">1,240 retargeted across platforms</div>
+              <div style="background:#dbeafe;border-radius:100px;height:4px;margin-top:4px;overflow:hidden;"><div style="width:67%;height:100%;background:#1877f2;border-radius:100px;"></div></div>
+            </div>
+            <div style="font-size:0.62rem;color:#6b6b6b;flex-shrink:0;">67%</div>
+          </div>
+          <!-- Platform badges -->
+          <div style="display:flex;gap:5px;margin-bottom:6px;padding-left:42px;">
+            <span style="font-size:0.52rem;font-weight:700;background:#1877f2;color:#fff;padding:2px 7px;border-radius:100px;">Facebook</span>
+            <span style="font-size:0.52rem;font-weight:700;background:linear-gradient(90deg,#e1306c,#bc1888);color:#fff;padding:2px 7px;border-radius:100px;">Instagram</span>
+            <span style="font-size:0.52rem;font-weight:700;background:#ff0000;color:#fff;padding:2px 7px;border-radius:100px;">YouTube</span>
+          </div>
+          <!-- Arrow -->
+          <div style="text-align:center;margin:3px 0 3px 42px;font-size:0.65rem;color:#9ca3af;">↓ re-engaged &amp; returned</div>
+          <!-- Step 3 -->
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#f0fdf4;display:grid;place-items:center;flex-shrink:0;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div style="flex:1;">
+              <div style="font-size:0.65rem;font-weight:700;color:#16a34a;">312 appointments booked</div>
+              <div style="background:#dcfce7;border-radius:100px;height:4px;margin-top:4px;overflow:hidden;"><div style="width:25%;height:100%;background:#16a34a;border-radius:100px;"></div></div>
+            </div>
+            <div style="font-size:0.62rem;font-weight:700;color:#16a34a;flex-shrink:0;">25%</div>
+          </div>
+          <!-- Summary metrics -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+            <div style="background:#f9f8f7;border-radius:8px;padding:10px 12px;">
+              <div style="font-size:0.57rem;color:#6b6b6b;">Cost / recovered lead</div>
+              <div style="font-size:0.78rem;font-weight:800;color:#0f0f0f;margin-top:2px;">₹210</div>
+            </div>
+            <div style="background:#f9f8f7;border-radius:8px;padding:10px 12px;">
+              <div style="font-size:0.57rem;color:#6b6b6b;">ROAS on retargeting</div>
+              <div style="font-size:0.78rem;font-weight:800;color:#0f0f0f;margin-top:2px;">4.8× <span style="font-size:0.6rem;color:#16a34a;font-weight:600;">return</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -1592,7 +1727,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="grid-3col" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 40px;">
         <!-- Mockup 1 -->
         <div style="border: 1px solid #e4e0e0; border-radius: 12px; overflow: hidden; aspect-ratio: 4/3;">
-          <img src="images/dental-website-mockup (1).png" alt="Dental clinic website design by med.ContagiAd" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;object-position:top left;display:block;" />
+          <img src="images/dental-website-mockup.png" alt="Dental clinic website design by med.ContagiAd" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;object-position:top left;display:block;" />
         </div>
         <!-- Mockup 2 -->
         <div style="border: 1px solid #e4e0e0; border-radius: 12px; overflow: hidden; aspect-ratio: 4/3;">
@@ -1643,7 +1778,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p style="font-size: 0.82rem; color: #6b6b6b; line-height: 1.7;">Website, SEO, Google Ads, social media, content marketing, and AI receptionist — all managed under one roof, working together.</p>
         </div>
 
-        <!-- Card 5 -->
+        <!-- Card 4 -->
         <div style="background: #f9f8f7; border: 1px solid #e4e0e0; border-radius: 12px; padding: 32px 24px;">
           <div style="width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg,#c8372d,#9b1d14); display: grid; place-items: center; margin-bottom: 16px;">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
@@ -1652,7 +1787,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <p style="font-size: 0.82rem; color: #6b6b6b; line-height: 1.7;">Pay monthly, cancel anytime. No annual contracts, no hidden exit clauses, no penalties. We recommend 90 days to see real growth — but after that, you stay because the results speak for themselves, not because a contract forces you.</p>
         </div>
 
-        <!-- Card 6 -->
+        <!-- Card 5 -->
         <div style="background: #f9f8f7; border: 1px solid #e4e0e0; border-radius: 12px; padding: 32px 24px;">
           <div style="width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg,#c8372d,#9b1d14); display: grid; place-items: center; margin-bottom: 16px;">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.61 21 3 13.39 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.26.2 2.47.57 3.58.11.35.03.74-.24 1.02l-2.23 2.2z"/></svg>
