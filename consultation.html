@@ -362,38 +362,38 @@
 
 <body>
 
-  <nav>
-    <a href="index.html" class="logo">med.<span>Contagi</span><span>A</span><span>d</span></a>
+  <nav id="nav-main">
+    <a href="index.html" class="logo" id="logo">med.<span>Contagi</span><span>A</span><span>d</span></a>
   </nav>
 
-  <main>
+  <main id="main-content">
 
     <!-- FORM -->
     <div class="card" id="form-card">
-      <div class="card-header">
-        <p class="eyebrow">Free Consultation — No Obligation</p>
-        <h1>Claim Your Free Website & Own Your City</h1>
-        <p>Leave your details and our team will call you within 24 hours to discuss how we make you the #1 practitioner
+      <div class="card-header" id="form-card-header">
+        <p class="eyebrow" id="form-eyebrow">Free Consultation — No Obligation</p>
+        <h1 id="form-heading">Claim Your Free Website & Own Your City</h1>
+        <p id="form-desc">Leave your details and our team will call you within 24 hours to discuss how we make you the #1 practitioner
           in your speciality.</p>
       </div>
-      <div class="card-body">
+      <div class="card-body" id="form-card-body">
         <form id="consult-form" onsubmit="handleSubmit(event)">
-          <div class="form-group">
+          <div class="form-group" id="form-group-name">
             <label for="name">Your Full Name <span style="color:#c8372d;">*</span></label>
             <input type="text" id="name" name="name" placeholder="Dr. Arjun Mehta" required autocomplete="name" />
           </div>
-          <div class="form-group">
+          <div class="form-group" id="form-group-phone">
             <label for="phone">Phone Number <span style="color:#c8372d;">*</span></label>
             <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required autocomplete="tel" />
           </div>
-          <div class="form-group">
+          <div class="form-group" id="form-group-email">
             <label for="email">Email Address <span style="color:#c8372d;">*</span></label>
             <input type="email" id="email" name="email" placeholder="dr.arjun@clinic.com" required
               autocomplete="email" />
           </div>
-          <button type="submit" class="submit-btn">Book My Free Consultation →</button>
+          <button type="submit" class="submit-btn" id="btn-submit">Book My Free Consultation →</button>
         </form>
-        <p class="form-footer">
+        <p class="form-footer" id="form-footer">
           No spam, ever <span>·</span> We call at your preferred time <span>·</span> 100% free
         </p>
       </div>
@@ -401,36 +401,36 @@
 
     <!-- CONFIRMATION -->
     <div class="card" id="confirmation">
-      <div class="confirm-header">
-        <div class="confirm-icon">
+      <div class="confirm-header" id="confirm-header">
+        <div class="confirm-icon" id="confirm-icon">
           <svg viewBox="0 0 24 24">
             <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
           </svg>
         </div>
-        <h2>You're on your way to becoming #1.</h2>
-        <p>Your consultation is confirmed. We'll call you within 24 hours.</p>
+        <h2 id="confirm-heading">You're on your way to becoming #1.</h2>
+        <p id="confirm-desc">Your consultation is confirmed. We'll call you within 24 hours.</p>
       </div>
-      <div class="confirm-body">
-        <p class="confirm-name">Welcome, <span id="confirm-name-text"></span> — here's what happens next:</p>
-        <div class="what-next">
-          <h3>What to expect</h3>
-          <div class="next-item">
+      <div class="confirm-body" id="confirm-body">
+        <p class="confirm-name" id="confirm-name">Welcome, <span id="confirm-name-text"></span> — here's what happens next:</p>
+        <div class="what-next" id="what-next">
+          <h3 id="what-next-heading">What to expect</h3>
+          <div class="next-item" id="next-item-1">
             <span class="next-num">1</span>
             <span>Our team will first call you to <strong>schedule a 30-minute session</strong> — then our specialist
               will call you to understand your practice, city, and speciality.</span>
           </div>
-          <div class="next-item">
+          <div class="next-item" id="next-item-2">
             <span class="next-num">2</span>
             <span>We'll show you exactly <strong>where patients are finding your competitors</strong> — and how we fix
               that for you.</span>
           </div>
-          <div class="next-item">
+          <div class="next-item" id="next-item-3">
             <span class="next-num">3</span>
             <span>You'll walk away with a <strong>free digital presence audit</strong> and a clear roadmap to owning
               your city — no obligation.</span>
           </div>
         </div>
-        <a href="index.html" class="back-link">← Back to home</a>
+        <a href="index.html" class="back-link" id="link-back-home">← Back to home</a>
       </div>
     </div>
 
